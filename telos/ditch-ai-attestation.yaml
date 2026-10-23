@@ -1,0 +1,17 @@
+id: ditch-ai-attestation
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  Independent verification exists so no one grades their own work -- the
+  party with no stake in the outcome attests the product, the vendor, and
+  the mark.
+anti_telos: >
+  Self-attestation. The vendor grades its own product. The audit is
+  performed by a subsidiary. The mark means nothing because the issuer
+  and the holder are the same entity.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

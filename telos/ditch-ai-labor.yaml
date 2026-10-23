@@ -1,0 +1,17 @@
+id: ditch-ai-labor
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+flow: labor
+telos: >
+  The people who do the work hold a seat where the work is governed. You
+  built everything the intelligence layer sits on. That work holds a seat.
+anti_telos: >
+  Everything the intelligence layer sits on was built by people with no
+  voice in how it is run. The ore is pulled, the chips are fabbed, the
+  racks are wired, and the people who did it are not at the table.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

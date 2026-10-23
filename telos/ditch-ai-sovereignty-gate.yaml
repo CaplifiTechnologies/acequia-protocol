@@ -1,0 +1,21 @@
+id: ditch-ai-sovereignty-gate
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  Every gate in the protocol checks material compatibility, authorization
+  scope, or measurement -- never identity, worthiness, or standing. Default
+  preserves the position of the person with least leverage. Override is
+  always available to the rights-holder.
+anti_telos: >
+  The gate starts checking identity. The attestation becomes a vendor club.
+  The headgate becomes a network membership check. The measurement becomes
+  an allocation lever. The seat becomes a credential gate. A material gate
+  acquires a social function it was not designed for, and the person with
+  least leverage pays first.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+    - fuel-can-nfc
+  products: []

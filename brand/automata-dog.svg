@@ -1,0 +1,325 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="d-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a48"/>
+      <stop offset="40%" stop-color="#a8834e"/>
+      <stop offset="100%" stop-color="#6b5a48"/>
+    </linearGradient>
+    <linearGradient id="d-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a6658"/>
+      <stop offset="50%" stop-color="#7a8678"/>
+      <stop offset="100%" stop-color="#5a6658"/>
+    </linearGradient>
+    <linearGradient id="d-dark-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b5a48"/>
+      <stop offset="50%" stop-color="#8a6a48"/>
+      <stop offset="100%" stop-color="#5a4a38"/>
+    </linearGradient>
+    <linearGradient id="d-copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a48"/>
+      <stop offset="30%" stop-color="#b8864c"/>
+      <stop offset="100%" stop-color="#8a6a48"/>
+    </linearGradient>
+    <radialGradient id="d-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1b241c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1b241c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="d-spring" patternUnits="userSpaceOnUse" width="4" height="8">
+      <path d="M0,0 Q2,4 4,0 Q2,4 0,8" fill="none" stroke="#3d6b78" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="290" cy="540" rx="210" ry="28" fill="url(#d-shadow)"/>
+
+  <!-- === TAIL - linked segments arcing upward === -->
+  <g>
+    <rect x="462" y="265" width="16" height="10" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.2" transform="rotate(-30,470,270)"/>
+    <rect x="475" y="248" width="14" height="9" rx="3" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.2" transform="rotate(-50,482,252)"/>
+    <rect x="482" y="228" width="12" height="8" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.1" transform="rotate(-65,488,232)"/>
+    <rect x="485" y="210" width="10" height="7" rx="2" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1" transform="rotate(-75,490,213)"/>
+    <ellipse cx="487" cy="200" rx="5" ry="4" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1" transform="rotate(-80,487,200)"/>
+    <!-- Joint pins -->
+    <circle cx="473" cy="260" r="2" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="483" cy="242" r="1.8" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="488" cy="222" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="489" cy="206" r="1.2" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+  </g>
+
+  <!-- === BACK LEGS === -->
+  <!-- Back left leg (rear, partially hidden) -->
+  <g>
+    <!-- Upper -->
+    <path d="M395,360 L405,360 L410,430 L390,430 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Gear joint -->
+    <circle cx="400" cy="430" r="11" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="400" cy="430" r="7" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.7" fill="none">
+      <line x1="400" y1="418" x2="400" y2="422"/><line x1="400" y1="438" x2="400" y2="442"/>
+      <line x1="388" y1="430" x2="392" y2="430"/><line x1="408" y1="430" x2="412" y2="430"/>
+      <line x1="392" y1="422" x2="394" y2="424"/><line x1="408" y1="422" x2="406" y2="424"/>
+      <line x1="392" y1="438" x2="394" y2="436"/><line x1="408" y1="438" x2="406" y2="436"/>
+    </g>
+    <circle cx="400" cy="430" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Lower -->
+    <rect x="393" y="440" width="14" height="55" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Paw -->
+    <path d="M388,495 L412,495 L414,510 Q400,515 386,510 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="395" y1="498" x2="395" y2="508" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="400" y1="498" x2="400" y2="510" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="405" y1="498" x2="405" y2="508" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- Back right leg -->
+  <g>
+    <path d="M425,355 L440,355 L448,425 L420,425 Z" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Plate lines -->
+    <line x1="428" y1="365" x2="438" y2="365" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="427" y1="380" x2="440" y2="380" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="425" y1="395" x2="442" y2="395" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Gear joint -->
+    <circle cx="434" cy="425" r="13" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="434" cy="425" r="9" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="434" y1="411" x2="434" y2="415"/><line x1="434" y1="435" x2="434" y2="439"/>
+      <line x1="420" y1="425" x2="424" y2="425"/><line x1="444" y1="425" x2="448" y2="425"/>
+      <line x1="425" y1="416" x2="427" y2="418"/><line x1="443" y1="416" x2="441" y2="418"/>
+      <line x1="425" y1="434" x2="427" y2="432"/><line x1="443" y1="434" x2="441" y2="432"/>
+      <line x1="423" y1="420" x2="425" y2="421"/><line x1="445" y1="420" x2="443" y2="421"/>
+      <line x1="423" y1="430" x2="425" y2="429"/><line x1="445" y1="430" x2="443" y2="429"/>
+    </g>
+    <circle cx="434" cy="425" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Lower -->
+    <rect x="425" y="436" width="18" height="55" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="430" y1="445" x2="438" y2="445" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="430" y1="460" x2="438" y2="460" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="430" y1="475" x2="438" y2="475" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Paw -->
+    <path d="M420,491 L448,491 L451,508 Q434,514 417,508 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="428" y1="494" x2="428" y2="506" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="434" y1="494" x2="434" y2="508" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="440" y1="494" x2="440" y2="506" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === BODY - articulated barrel === -->
+  <!-- Main barrel torso -->
+  <path d="M180,270 Q180,240 230,235 L430,260 Q465,270 465,300 L460,350 Q455,375 420,380 L200,370 Q175,365 175,335 Z" fill="url(#d-brass)" stroke="#1b241c" stroke-width="2"/>
+
+  <!-- Barrel plate lines - articulated segments -->
+  <line x1="240" y1="238" x2="235" y2="368" stroke="#1b241c" stroke-width="1"/>
+  <line x1="285" y1="242" x2="278" y2="372" stroke="#1b241c" stroke-width="1"/>
+  <line x1="330" y1="248" x2="325" y2="375" stroke="#1b241c" stroke-width="1"/>
+  <line x1="375" y1="254" x2="372" y2="378" stroke="#1b241c" stroke-width="1"/>
+  <line x1="420" y1="262" x2="418" y2="380" stroke="#1b241c" stroke-width="1"/>
+
+  <!-- Barrel rivets -->
+  <g fill="#6b5a48" stroke="#1b241c" stroke-width="0.5">
+    <circle cx="210" cy="255" r="2"/><circle cx="210" cy="350" r="2"/>
+    <circle cx="260" cy="248" r="2"/><circle cx="258" cy="358" r="2"/>
+    <circle cx="305" cy="250" r="2"/><circle cx="303" cy="362" r="2"/>
+    <circle cx="350" cy="256" r="2"/><circle cx="348" cy="366" r="2"/>
+    <circle cx="395" cy="262" r="2"/><circle cx="395" cy="370" r="2"/>
+    <circle cx="440" cy="272" r="2"/><circle cx="438" cy="370" r="2"/>
+  </g>
+
+  <!-- === VISIBLE MAINSPRING in torso (through viewing port) === -->
+  <g>
+    <!-- Viewing port frame -->
+    <ellipse cx="310" cy="305" rx="55" ry="40" fill="#1f3f48" opacity="0.3" stroke="#1b241c" stroke-width="1.5"/>
+    <ellipse cx="310" cy="305" rx="50" ry="36" fill="none" stroke="#8a6a48" stroke-width="1"/>
+
+    <!-- Mainspring spiral -->
+    <g fill="none" stroke="#3d6b78" stroke-width="1.2">
+      <path d="M310,305 Q320,295 325,305 Q330,320 320,325 Q305,330 300,318 Q295,303 305,298 Q318,290 330,300 Q340,315 328,330 Q312,340 298,325 Q288,308 300,295"/>
+      <!-- Outer coil -->
+      <path d="M300,295 Q315,282 335,295 Q350,312 335,335 Q315,350 295,332 Q280,312 295,292"/>
+    </g>
+    <!-- Spring arbor -->
+    <circle cx="310" cy="305" r="5" fill="#3d6b78" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="310" cy="305" r="2" fill="#1b241c"/>
+
+    <!-- Gear train visible -->
+    <circle cx="270" cy="290" r="10" fill="none" stroke="#3d6b78" stroke-width="1"/>
+    <circle cx="270" cy="290" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <g stroke="#3d6b78" stroke-width="0.7">
+      <line x1="270" y1="279" x2="270" y2="282"/><line x1="270" y1="298" x2="270" y2="301"/>
+      <line x1="259" y1="290" x2="262" y2="290"/><line x1="278" y1="290" x2="281" y2="290"/>
+      <line x1="263" y1="283" x2="265" y2="285"/><line x1="277" y1="283" x2="275" y2="285"/>
+      <line x1="263" y1="297" x2="265" y2="295"/><line x1="277" y1="297" x2="275" y2="295"/>
+    </g>
+
+    <circle cx="350" cy="318" r="8" fill="none" stroke="#3d6b78" stroke-width="0.9"/>
+    <circle cx="350" cy="318" r="2.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <g stroke="#3d6b78" stroke-width="0.6">
+      <line x1="350" y1="309" x2="350" y2="312"/><line x1="350" y1="324" x2="350" y2="327"/>
+      <line x1="341" y1="318" x2="344" y2="318"/><line x1="356" y1="318" x2="359" y2="318"/>
+    </g>
+
+    <!-- Escapement visible -->
+    <path d="M275,310 L280,315 L275,320" fill="none" stroke="#3d6b78" stroke-width="0.8"/>
+    <line x1="275" y1="315" x2="265" y2="315" stroke="#3d6b78" stroke-width="0.8"/>
+    <circle cx="265" cy="315" r="1.5" fill="#3d6b78"/>
+  </g>
+
+  <!-- === WIND-UP KEY on back === -->
+  <g>
+    <!-- Key shaft -->
+    <rect x="346" y="228" width="8" height="20" rx="2" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Key mounting plate -->
+    <ellipse cx="350" cy="250" rx="10" ry="5" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Key bow -->
+    <path d="M333,210 L333,196 Q333,184 345,184 L355,184 Q367,184 367,196 L367,210" fill="none" stroke="#8a6a48" stroke-width="3.5"/>
+    <path d="M333,210 L333,196 Q333,184 345,184 L355,184 Q367,184 367,196 L367,210" fill="none" stroke="#1b241c" stroke-width="1.2"/>
+    <!-- Key detail line -->
+    <rect x="344" y="232" width="12" height="3" rx="1" fill="#6b5a48" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === FRONT LEGS === -->
+  <!-- Front left leg (rear) -->
+  <g>
+    <path d="M195,340 L207,335 L218,420 L192,425 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="205" cy="425" r="11" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="205" cy="425" r="7" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.7" fill="none">
+      <line x1="205" y1="413" x2="205" y2="417"/><line x1="205" y1="433" x2="205" y2="437"/>
+      <line x1="193" y1="425" x2="197" y2="425"/><line x1="213" y1="425" x2="217" y2="425"/>
+      <line x1="197" y1="417" x2="199" y2="419"/><line x1="213" y1="417" x2="211" y2="419"/>
+      <line x1="197" y1="433" x2="199" y2="431"/><line x1="213" y1="433" x2="211" y2="431"/>
+    </g>
+    <circle cx="205" cy="425" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.6"/>
+    <rect x="198" y="435" width="14" height="52" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <path d="M193,487 L217,487 L219,503 Q205,508 191,503 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="200" y1="490" x2="200" y2="501" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="205" y1="490" x2="205" y2="503" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="210" y1="490" x2="210" y2="501" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- Front right leg -->
+  <g>
+    <path d="M165,340 L180,332 L194,418 L162,422 Z" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Plate lines -->
+    <line x1="168" y1="350" x2="180" y2="346" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="167" y1="370" x2="182" y2="365" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="165" y1="390" x2="185" y2="385" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Gear joint -->
+    <circle cx="178" cy="420" r="13" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="178" cy="420" r="9" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="178" y1="406" x2="178" y2="410"/><line x1="178" y1="430" x2="178" y2="434"/>
+      <line x1="164" y1="420" x2="168" y2="420"/><line x1="188" y1="420" x2="192" y2="420"/>
+      <line x1="169" y1="411" x2="171" y2="413"/><line x1="187" y1="411" x2="185" y2="413"/>
+      <line x1="169" y1="429" x2="171" y2="427"/><line x1="187" y1="429" x2="185" y2="427"/>
+      <line x1="166" y1="415" x2="168" y2="416"/><line x1="190" y1="415" x2="188" y2="416"/>
+      <line x1="166" y1="425" x2="168" y2="424"/><line x1="190" y1="425" x2="188" y2="424"/>
+    </g>
+    <circle cx="178" cy="420" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Lower leg -->
+    <rect x="169" y="432" width="18" height="55" rx="3" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="174" y1="442" x2="182" y2="442" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="174" y1="457" x2="182" y2="457" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="174" y1="472" x2="182" y2="472" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Paw -->
+    <path d="M164,487 L192,487 L195,504 Q178,510 161,504 Z" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="172" y1="490" x2="172" y2="502" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="178" y1="490" x2="178" y2="504" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="184" y1="490" x2="184" y2="502" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === CHEST / FRONT === -->
+  <path d="M175,270 Q155,280 150,310 Q148,340 170,360 L200,370 L200,268 Z" fill="url(#d-copper)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Chest plate lines -->
+  <line x1="160" y1="290" x2="195" y2="280" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="155" y1="315" x2="198" y2="310" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="158" y1="340" x2="198" y2="340" stroke="#1b241c" stroke-width="0.6"/>
+  <!-- Chest rivets -->
+  <circle cx="170" cy="300" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="168" cy="325" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="172" cy="350" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+
+  <!-- === NECK === -->
+  <g>
+    <!-- Neck plates - angled upward -->
+    <path d="M150,270 L175,240 Q180,232 170,225 L130,210 Q115,220 120,240 L130,270 Z" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Neck plate divisions -->
+    <line x1="140" y1="218" x2="168" y2="232" stroke="#1b241c" stroke-width="0.7"/>
+    <line x1="135" y1="240" x2="170" y2="247" stroke="#1b241c" stroke-width="0.7"/>
+    <line x1="130" y1="255" x2="160" y2="258" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Neck rivets -->
+    <circle cx="148" cy="225" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="150" cy="248" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  </g>
+
+  <!-- === HEAD === -->
+  <g>
+    <!-- Skull / cranium -->
+    <path d="M85,170 L140,175 Q155,180 155,200 L150,215 L125,225 L90,220 Q70,215 68,200 Q65,185 85,170 Z" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+
+    <!-- Muzzle -->
+    <path d="M68,195 L50,200 Q38,205 38,215 L42,225 L68,230 L90,220 Q70,215 68,200 Z" fill="url(#d-copper)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Muzzle plate line -->
+    <line x1="55" y1="205" x2="80" y2="200" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Nose -->
+    <ellipse cx="42" cy="212" rx="6" ry="5" fill="#1b241c" stroke="#1b241c" stroke-width="1"/>
+    <ellipse cx="40" cy="210" rx="2" ry="1.5" fill="#3d6b78" opacity="0.5"/>
+    <!-- Jaw hinge -->
+    <circle cx="80" cy="218" r="4" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="80" cy="218" r="1.5" fill="#3d6b78"/>
+    <!-- Jaw line -->
+    <path d="M50,222 L80,218" fill="none" stroke="#1b241c" stroke-width="1"/>
+
+    <!-- Eye -->
+    <circle cx="95" cy="192" r="10" fill="#1f3f48" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="95" cy="192" r="7" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <circle cx="95" cy="192" r="3.5" fill="#1b241c"/>
+    <circle cx="93" cy="189" r="1.5" fill="#efe6d4" opacity="0.5"/>
+    <!-- Lens rings -->
+    <circle cx="95" cy="192" r="9" fill="none" stroke="#8a6a48" stroke-width="0.5"/>
+    <circle cx="95" cy="192" r="6" fill="none" stroke="#8a6a48" stroke-width="0.3"/>
+
+    <!-- Head rivets -->
+    <circle cx="110" cy="180" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="130" cy="185" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="120" cy="215" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+
+    <!-- Head plate lines -->
+    <line x1="105" y1="175" x2="105" y2="210" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="125" y1="178" x2="130" y2="218" stroke="#1b241c" stroke-width="0.6"/>
+
+    <!-- === EARS - hinged brass plates === -->
+    <!-- Left ear (pointing up and slightly back) -->
+    <path d="M100,170 L90,130 Q88,120 95,118 L105,118 Q112,120 110,130 L108,165" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Ear hinge -->
+    <circle cx="104" cy="168" r="4" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="104" cy="168" r="1.5" fill="#3d6b78"/>
+    <!-- Ear plate line -->
+    <line x1="95" y1="140" x2="108" y2="138" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Ear rivet -->
+    <circle cx="100" cy="148" r="1" fill="#6b5a48" stroke="#1b241c" stroke-width="0.3"/>
+    <!-- Inner ear detail -->
+    <path d="M97,145 L94,133 Q95,128 99,128 L103,128 Q107,128 106,133 L105,145" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="0.6"/>
+
+    <!-- Right ear -->
+    <path d="M130,172 L135,132 Q136,122 130,120 L120,120 Q114,122 115,132 L118,167" fill="url(#d-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="124" cy="170" r="4" fill="url(#d-steel)" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="124" cy="170" r="1.5" fill="#3d6b78"/>
+    <line x1="120" y1="142" x2="133" y2="140" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="126" cy="148" r="1" fill="#6b5a48" stroke="#1b241c" stroke-width="0.3"/>
+    <path d="M123,145 L122,133 Q122,128 126,128 L130,128 Q133,128 132,133 L130,147" fill="url(#d-dark-brass)" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === RUMP / HAUNCH === -->
+  <path d="M420,260 Q465,270 465,300 L460,350 Q455,375 435,380 L420,380 L440,340 L445,290 Z" fill="url(#d-copper)" stroke="#1b241c" stroke-width="1"/>
+  <line x1="435" y1="280" x2="448" y2="290" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="432" y1="310" x2="450" y2="315" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="428" y1="345" x2="450" y2="350" stroke="#1b241c" stroke-width="0.6"/>
+  <!-- Haunch rivets -->
+  <circle cx="442" cy="295" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="440" cy="330" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="435" cy="365" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+
+  <!-- === BELLY SPRING COILS visible underneath === -->
+  <g opacity="0.5">
+    <path d="M220,368 Q230,375 240,368 Q250,375 260,368 Q270,375 280,368 Q290,375 300,368 Q310,375 320,368 Q330,375 340,368 Q350,375 360,368 Q370,375 380,368" fill="none" stroke="#3d6b78" stroke-width="1"/>
+    <path d="M230,372 Q240,380 250,372 Q260,380 270,372 Q280,380 290,372 Q300,380 310,372 Q320,380 330,372 Q340,380 350,372 Q360,380 370,372" fill="none" stroke="#3d6b78" stroke-width="0.6"/>
+  </g>
+</svg>

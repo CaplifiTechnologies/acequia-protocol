@@ -1,0 +1,18 @@
+id: ditch-ai-supply-chain
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+flow: supply-chain
+telos: >
+  The material mesh governs itself -- water, ore, power, chips, and compute
+  sit at the same table because they depend on each other, and no single
+  node captures the others.
+anti_telos: >
+  Vendor lock-in. One seat owns the table. Provenance is a marketing claim
+  instead of a receipt. The supply chain has no shared governance and the
+  biggest node writes the terms.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

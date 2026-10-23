@@ -1,0 +1,17 @@
+id: ditch-ai-shortage
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  When the water runs short, shortage is shared rather than won -- no
+  first-come-first-served, no highest-bidder, no biggest-party-wins.
+  The table governs scarcity, not the market.
+anti_telos: >
+  The biggest player takes what it needs. Shortage falls on whoever has
+  the least leverage. The data center drinks the valley dry because it
+  can pay more than the orchard.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

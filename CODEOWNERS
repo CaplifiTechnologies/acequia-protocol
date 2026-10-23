@@ -1,0 +1,31 @@
+# Ditch AI — Code Owners
+#
+# Default: Founding Steward reviews everything.
+# As outside members join the body, add their handles to relevant paths.
+
+# Default owner — all files
+*                       @mattgallegos
+
+# Core primitives — changes here affect every downstream consumer
+app/acequia.py          @mattgallegos
+app/headgate.py         @mattgallegos
+app/__init__.py         @mattgallegos
+
+# Specs — standards text under CC-BY-4.0, changes require steward review
+specs/                  @mattgallegos
+
+# Founding documents — governance, brand, product thesis
+founding/               @mattgallegos
+GOVERNANCE-BY-TELOS.md  @mattgallegos
+
+# Licensing — never changed without steward + counsel
+LICENSE                 @mattgallegos
+LICENSE-SPECS           @mattgallegos
+DCO                     @mattgallegos
+
+# CI gates — the gates themselves are guarded
+scripts/                @mattgallegos
+.github/                @mattgallegos
+
+# Package config
+pyproject.toml          @mattgallegos

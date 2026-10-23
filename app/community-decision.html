@@ -1,0 +1,1073 @@
+<title>Acequia Decisions</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #efe6d4;
+  --surface: #f7f1e4;
+  --surface-hover: #ece4d0;
+  --surface-active: #e4dbc6;
+  --ink: #1b241c;
+  --muted: #5a6658;
+  --muted-light: #8a9488;
+  --water: #3d6b78;
+  --water-deep: #1f3f48;
+  --earth: #8a6a48;
+  --mesa: #6b5a48;
+  --border: #d4cbba;
+  --border-light: #e0d8c8;
+  --tier-t0: #2d6848;
+  --tier-t0-bg: #e8f0e6;
+  --tier-t1: #3d6b78;
+  --tier-t1-bg: #e4eef0;
+  --tier-t2: #a07030;
+  --tier-t2-bg: #f2ece0;
+  --tier-t3: #7a7062;
+  --tier-t3-bg: #eae8e4;
+  --phase-pruning: #6b5a88;
+  --phase-pruning-bg: #eee8f4;
+  --phase-voting: #3d6b78;
+  --phase-voting-bg: #e4eef0;
+  --upvote-active: #c45830;
+  --shadow-sm: 0 1px 2px rgba(27,36,28,0.06);
+  --shadow: 0 2px 8px rgba(27,36,28,0.08);
+  --shadow-lg: 0 8px 24px rgba(27,36,28,0.10);
+  --radius: 6px;
+  --radius-lg: 10px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg: #141a1c;
+  --surface: #1c2628;
+  --surface-hover: #243032;
+  --surface-active: #2c3a3c;
+  --ink: #e4dece;
+  --muted: #8e9688;
+  --muted-light: #5e6860;
+  --water: #5a9bac;
+  --water-deep: #3d7888;
+  --earth: #c49a60;
+  --mesa: #a08468;
+  --border: #2e3a3c;
+  --border-light: #243032;
+  --tier-t0: #4daa70;
+  --tier-t0-bg: #1a2a20;
+  --tier-t1: #5a9bac;
+  --tier-t1-bg: #1a2830;
+  --tier-t2: #c49a50;
+  --tier-t2-bg: #2a2418;
+  --tier-t3: #9e9488;
+  --tier-t3-bg: #222220;
+  --phase-pruning: #9a88b8;
+  --phase-pruning-bg: #241e30;
+  --phase-voting: #5a9bac;
+  --phase-voting-bg: #1a2830;
+  --upvote-active: #e07050;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow: 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.3);
+}}
+:root[data-theme="dark"]{
+  --bg: #141a1c;
+  --surface: #1c2628;
+  --surface-hover: #243032;
+  --surface-active: #2c3a3c;
+  --ink: #e4dece;
+  --muted: #8e9688;
+  --muted-light: #5e6860;
+  --water: #5a9bac;
+  --water-deep: #3d7888;
+  --earth: #c49a60;
+  --mesa: #a08468;
+  --border: #2e3a3c;
+  --border-light: #243032;
+  --tier-t0: #4daa70;
+  --tier-t0-bg: #1a2a20;
+  --tier-t1: #5a9bac;
+  --tier-t1-bg: #1a2830;
+  --tier-t2: #c49a50;
+  --tier-t2-bg: #2a2418;
+  --tier-t3: #9e9488;
+  --tier-t3-bg: #222220;
+  --phase-pruning: #9a88b8;
+  --phase-pruning-bg: #241e30;
+  --phase-voting: #5a9bac;
+  --phase-voting-bg: #1a2830;
+  --upvote-active: #e07050;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow: 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.3);
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+* { box-sizing: border-box; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+
+.hdr { padding: 32px 0 0; }
+.hdr-title { font-family: var(--font-display); font-weight: 700; font-size: 28px; color: var(--water-deep); letter-spacing: -0.5px; margin: 0; }
+.hdr-community { font-weight: 600; font-size: 14px; color: var(--muted); letter-spacing: 0.03em; text-transform: uppercase; margin: 2px 0 0; }
+.hdr-tagline { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 13px; color: var(--muted-light); margin: 4px 0 0; }
+.hdr-line { height: 2px; background: linear-gradient(90deg, var(--water), var(--water-deep), transparent); margin: 16px 0 0; border-radius: 1px; }
+
+.tabs { display: flex; gap: 2px; margin: 20px 0 24px; border-bottom: 1px solid var(--border); }
+.tab { font-weight: 600; font-size: 13px; color: var(--muted); background: none; border: none; padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; font-family: var(--font-body); }
+.tab:hover { color: var(--ink); }
+.tab.active { color: var(--water-deep); border-bottom-color: var(--water); }
+.tab-new { margin-left: auto; color: var(--water); }
+.tab-new:hover { color: var(--water-deep); }
+
+.view { animation: fadeUp 0.2s ease; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+.phase-label { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; }
+
+.card { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 18px 20px; margin: 0 0 10px; cursor: pointer; transition: box-shadow 0.15s, border-color 0.15s; }
+.card:hover { box-shadow: var(--shadow); border-color: var(--border); }
+.card-top { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+.card-title { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--ink); flex: 1; }
+.card-desc { font-size: 13px; color: var(--muted); margin: 0 0 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card-meta { display: flex; gap: 16px; font-size: 12px; color: var(--muted-light); }
+.card-meta span { display: flex; align-items: center; gap: 4px; }
+
+.badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 3px; white-space: nowrap; }
+.badge-pruning { background: var(--phase-pruning-bg); color: var(--phase-pruning); }
+.badge-voting { background: var(--phase-voting-bg); color: var(--phase-voting); }
+.badge-t0 { background: var(--tier-t0-bg); color: var(--tier-t0); }
+.badge-t1 { background: var(--tier-t1-bg); color: var(--tier-t1); }
+.badge-t2 { background: var(--tier-t2-bg); color: var(--tier-t2); }
+.badge-t3 { background: var(--tier-t3-bg); color: var(--tier-t3); }
+.badge-official { background: var(--water-deep); color: #f7f1e4; }
+.badge-petition { background: var(--earth); color: #f7f1e4; }
+
+.back-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-family: var(--font-body); font-size: 13px; padding: 4px 0; margin: 0 0 16px; display: flex; align-items: center; gap: 6px; }
+.back-btn:hover { color: var(--ink); }
+
+.detail-hdr { margin: 0 0 20px; }
+.detail-title { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0 0 6px; }
+.detail-desc { font-size: 14px; color: var(--muted); margin: 8px 0 0; line-height: 1.6; }
+.detail-meta { display: flex; align-items: center; gap: 10px; margin: 6px 0 0; font-size: 13px; color: var(--muted-light); flex-wrap: wrap; }
+.detail-meta .badge { position: relative; top: -1px; }
+
+.section-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 24px 0 10px; }
+
+.opt-list { display: flex; flex-direction: column; gap: 6px; }
+.opt-item { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 12px 14px; display: flex; align-items: center; gap: 12px; }
+.opt-item.pruned { opacity: 0.45; }
+.opt-info { flex: 1; min-width: 0; }
+.opt-label { font-weight: 600; font-size: 14px; }
+.opt-desc { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+.opt-submitter { font-size: 11px; color: var(--muted-light); margin: 2px 0 0; }
+
+.upvote { display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px; cursor: pointer; transition: all 0.15s; font-family: var(--font-body); min-width: 48px; }
+.upvote:hover { border-color: var(--water); background: var(--surface-hover); }
+.upvote.voted { border-color: var(--upvote-active); color: var(--upvote-active); background: rgba(196,88,48,0.06); }
+.upvote-arrow { font-size: 12px; line-height: 1; }
+.upvote-count { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.upvote-pop { animation: pop 0.25s ease; }
+@keyframes pop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+
+.add-opt { display: flex; gap: 8px; margin: 12px 0 0; }
+.add-opt input { flex: 1; font-family: var(--font-body); font-size: 14px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+.add-opt input:focus { outline: none; border-color: var(--water); }
+
+.btn { font-family: var(--font-body); font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: var(--radius); border: none; cursor: pointer; transition: all 0.15s; }
+.btn-primary { background: var(--water-deep); color: #f7f1e4; }
+.btn-primary:hover { background: var(--water); }
+.btn-primary:disabled { opacity: 0.4; cursor: default; }
+.btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); }
+.btn-ghost:hover { border-color: var(--water); color: var(--water); }
+
+.vote-ui { margin: 16px 0; }
+.rank-list { display: flex; flex-direction: column; gap: 4px; min-height: 40px; }
+.rank-item { background: var(--surface); border: 1px solid var(--water); border-left: 3px solid var(--water); border-radius: var(--radius); padding: 10px 12px; display: flex; align-items: center; gap: 10px; animation: slideIn 0.2s ease; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+.rank-num { font-weight: 700; font-size: 14px; color: var(--water); min-width: 18px; font-variant-numeric: tabular-nums; }
+.rank-label { flex: 1; font-weight: 500; font-size: 14px; }
+.rank-btns { display: flex; gap: 4px; }
+.rank-btn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 2px 4px; font-size: 14px; line-height: 1; border-radius: 3px; }
+.rank-btn:hover { color: var(--water); background: var(--surface-hover); }
+.rank-empty { padding: 20px; text-align: center; color: var(--muted-light); font-size: 13px; border: 1px dashed var(--border); border-radius: var(--radius); }
+
+.chip-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 14px; font-family: var(--font-body); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; color: var(--ink); }
+.chip:hover { border-color: var(--water); background: var(--surface-hover); }
+.chip.used { opacity: 0.3; pointer-events: none; }
+
+.vote-footer { display: flex; align-items: center; justify-content: space-between; margin: 20px 0 0; }
+.vote-status { font-size: 13px; color: var(--muted-light); font-variant-numeric: tabular-nums; }
+
+.voted-msg { background: var(--tier-t1-bg); border: 1px solid var(--water); border-radius: var(--radius); padding: 14px 16px; text-align: center; color: var(--water-deep); font-weight: 600; font-size: 14px; }
+
+.tier-box { border-left: 4px solid; border-radius: var(--radius); padding: 18px 20px; margin: 0 0 20px; }
+.tier-box.t0 { border-color: var(--tier-t0); background: var(--tier-t0-bg); }
+.tier-box.t1 { border-color: var(--tier-t1); background: var(--tier-t1-bg); }
+.tier-box.t2 { border-color: var(--tier-t2); background: var(--tier-t2-bg); }
+.tier-box.t3 { border-color: var(--tier-t3); background: var(--tier-t3-bg); }
+.tier-code { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; }
+.tier-box.t0 .tier-code { color: var(--tier-t0); }
+.tier-box.t1 .tier-code { color: var(--tier-t1); }
+.tier-box.t2 .tier-code { color: var(--tier-t2); }
+.tier-box.t3 .tier-code { color: var(--tier-t3); }
+.tier-winner { font-family: var(--font-display); font-weight: 700; font-size: 20px; margin: 0 0 4px; }
+.tier-explain { font-size: 13px; color: var(--muted); }
+
+.bar-list { display: flex; flex-direction: column; gap: 8px; }
+.bar-row { display: flex; align-items: center; gap: 12px; }
+.bar-label { font-size: 13px; font-weight: 500; min-width: 120px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { flex: 1; height: 22px; background: var(--border-light); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; background: var(--water); transition: width 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
+.bar-row.winner .bar-fill { background: var(--water-deep); }
+.bar-row.winner .bar-label { font-weight: 700; }
+.bar-pct { font-size: 13px; font-weight: 600; min-width: 40px; text-align: right; font-variant-numeric: tabular-nums; }
+
+.council-action { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 14px 16px; margin: 16px 0 0; display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.council-action .ca-icon { font-size: 16px; }
+.council-action .ca-text { color: var(--muted); }
+.council-action .ca-text strong { color: var(--ink); font-weight: 600; }
+
+.rounds-toggle { background: none; border: none; color: var(--water); cursor: pointer; font-family: var(--font-body); font-size: 12px; margin: 12px 0 4px; padding: 0; }
+.rounds-toggle:hover { text-decoration: underline; }
+.rounds-detail { font-size: 12px; color: var(--muted); line-height: 1.8; }
+
+.demo-bar { margin: 32px 0 0; padding: 14px 0 0; border-top: 1px dashed var(--border); text-align: center; }
+.demo-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-light); margin: 0 0 8px; }
+
+.form-wrap { max-width: 480px; }
+.form-group { margin: 0 0 16px; }
+.form-label { display: block; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 4px; }
+.form-input { width: 100%; font-family: var(--font-body); font-size: 14px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+.form-input:focus { outline: none; border-color: var(--water); }
+textarea.form-input { min-height: 80px; resize: vertical; }
+select.form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a6658'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+
+.empty { text-align: center; padding: 40px 20px; color: var(--muted-light); font-size: 14px; }
+
+.non-decision { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 14px 16px; margin: 16px 0 0; font-size: 13px; color: var(--muted); font-style: italic; }
+
+.origin-header { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--ink); margin: 20px 0 12px; letter-spacing: -0.2px; }
+.origin-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.origin-dot.official { background: var(--water-deep); }
+.origin-dot.petition { background: var(--earth); }
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+@media(max-width:640px){
+  .hdr-title { font-size: 24px; }
+  .bar-label { min-width: 80px; max-width: 120px; font-size: 12px; }
+  .card { padding: 14px 16px; }
+  .detail-title { font-size: 19px; }
+}
+</style>
+
+<div id="app"></div>
+
+<script>
+const DAY = 86400000;
+const now = Date.now();
+
+const CONFIG = {
+  communityName: 'Greenfield',
+  communitySize: 148,
+  votingMethod: 'ranked-choice',
+  pruningThreshold: 5,
+  pruningPeriod: 7,
+  votingPeriod: 7,
+  minBallotSize: 2,
+  maxBallotSize: 6,
+  t0Threshold: 0.72,
+  t1Confidence: 0.10,
+  t2Minimum: 0.20,
+};
+
+let viewerId = null;
+try { viewerId = localStorage.getItem('acequia-vid'); } catch(e) {}
+if (!viewerId) {
+  viewerId = Math.random().toString(36).slice(2) + Date.now().toString(36);
+  try { localStorage.setItem('acequia-vid', viewerId); } catch(e) {}
+}
+
+function seededShuffle(arr, seed) {
+  const a = [...arr];
+  let s = seed;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (s * 1103515245 + 12345) & 0x7fffffff;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function genVotes(optIds, count, favorIdx, seed) {
+  const votes = {};
+  for (let i = 0; i < count; i++) {
+    let s = seed + i * 7919;
+    const ranked = seededShuffle(optIds, s);
+    s = (s * 1103515245 + 12345) & 0x7fffffff;
+    if ((s % 100) < 42 && favorIdx !== undefined) {
+      const fi = ranked.indexOf(optIds[favorIdx]);
+      if (fi > 0) { ranked.splice(fi, 1); ranked.unshift(optIds[favorIdx]); }
+    }
+    votes['s' + i] = ranked;
+  }
+  return votes;
+}
+
+const proposals = [
+  {
+    id: 'p1', status: 'pruning', origin: 'community',
+    title: 'Community garden tool lending',
+    description: 'Should the community garden establish a formal tool lending program, or continue with the current informal sharing arrangement?',
+    proposer: 'Garden Committee',
+    type: 'ranked-choice',
+    created: now - 3 * DAY,
+    pruningDeadline: now + 4 * DAY,
+    votingDeadline: null,
+    options: [
+      { id: 'p1o1', label: 'Free lending with sign-out sheet', description: 'Volunteer-maintained, tools stored in the garden shed', submitter: 'Garden Committee', upvotes: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x'] },
+      { id: 'p1o2', label: 'Weekly tool library hours', description: 'Saturday mornings, staffed by volunteers', submitter: 'Resident', upvotes: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r'] },
+      { id: 'p1o3', label: 'No formal program needed', description: 'Current informal sharing works fine', submitter: 'Resident', upvotes: ['a','b','c','d','e','f','g','h','i','j','k','l'] },
+      { id: 'p1o4', label: 'Deposit-based lending', description: 'Small refundable deposit per tool, any time', submitter: 'Resident', upvotes: ['a','b','c','d','e','f','g'] },
+      { id: 'p1o5', label: 'Tool rental fees', description: 'Fund maintenance through modest rental charges', submitter: 'Resident', upvotes: ['a','b','c'] },
+    ],
+    votes: {}, result: null,
+  },
+  {
+    id: 'p8', status: 'pruning', origin: 'community',
+    title: 'Farmers market vendor parking',
+    description: 'Saturday morning vendors are parking on residential streets and blocking driveways. Should we designate vendor-only parking behind the community center, or leave it informal?',
+    proposer: 'Resident',
+    type: 'ranked-choice',
+    created: now - 2 * DAY,
+    pruningDeadline: now + 5 * DAY,
+    votingDeadline: null,
+    options: [
+      { id: 'p8o1', label: 'Designate vendor lot behind community center', description: 'Mark 20 spaces for vendor use Saturdays 5am-2pm', submitter: 'Resident', upvotes: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s'] },
+      { id: 'p8o2', label: 'Shared lot with early vendor window', description: 'Vendors get priority 5-7am, then first-come after', submitter: 'Resident', upvotes: ['a','b','c','d','e','f','g','h','i','j'] },
+      { id: 'p8o3', label: 'Keep it informal', description: 'No change, neighbors work it out', submitter: 'Resident', upvotes: ['a','b','c','d','e'] },
+    ],
+    votes: {}, result: null,
+  },
+  {
+    id: 'p2', status: 'voting', origin: 'council',
+    title: 'Main Street light post color',
+    description: 'What color should we paint the light posts along Main Street between Oak and Elm? The posts are due for repainting this fall.',
+    proposer: 'Parks Director Chen',
+    type: 'ranked-choice',
+    created: now - 12 * DAY,
+    pruningDeadline: now - 5 * DAY,
+    votingDeadline: now + 2 * DAY,
+    options: [
+      { id: 'p2o1', label: 'Forest green', description: 'Classic park green, matches existing benches', submitter: 'Parks Director Chen', upvotes: new Array(47).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p2o2', label: 'Black', description: 'Modern, low-maintenance', submitter: 'Resident', upvotes: new Array(31).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p2o3', label: 'Navy blue', description: 'Matches the downtown banner colors', submitter: 'Resident', upvotes: new Array(22).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p2o4', label: 'Leave as-is', description: 'Current gray finish, no repainting needed', submitter: 'Resident', upvotes: new Array(18).fill(0).map((_,i)=>'u'+i) },
+    ],
+    prunedOptions: [
+      { id: 'p2o5', label: 'Burnt orange', description: '', submitter: 'Resident', upvotes: ['a','b','c','d'] },
+    ],
+    votes: genVotes(['p2o1','p2o2','p2o3','p2o4'], 23, 0, 42),
+    result: null,
+  },
+  {
+    id: 'p3', status: 'voting', origin: 'council',
+    title: 'License plate reader deployment, Highway 24',
+    description: 'Should the city authorize installation of automated license plate readers along the Highway 24 corridor? All surviving options include Acequia Protocol headgate controls for data governance.',
+    proposer: 'City Council',
+    type: 'ranked-choice',
+    created: now - 18 * DAY,
+    pruningDeadline: now - 7 * DAY,
+    votingDeadline: now + 5 * DAY,
+    options: [
+      { id: 'p3o1', label: 'Authorize with full headgate', description: 'Deploy readers, all data governed under Acequia Protocol. Community authorization required for every access category.', submitter: 'City Council', upvotes: new Array(38).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p3o2', label: 'Authorize limited hours only', description: 'Deploy readers active 10pm-6am only. Full headgate controls.', submitter: 'Resident', upvotes: new Array(29).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p3o3', label: 'Do not authorize', description: 'Decline deployment entirely', submitter: 'Resident', upvotes: new Array(25).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p3o4', label: 'Table for 6 months', description: 'Revisit after the community data governance framework is fully ratified', submitter: 'Resident', upvotes: new Array(16).fill(0).map((_,i)=>'u'+i) },
+    ],
+    prunedOptions: [
+      { id: 'p3o5', label: 'Authorize without headgate controls', description: 'Standard vendor data agreement only', submitter: 'Resident', upvotes: ['a','b'] },
+    ],
+    votes: genVotes(['p3o1','p3o2','p3o3','p3o4'], 45, 0, 99),
+    result: null,
+  },
+  {
+    id: 'p4', status: 'decided', origin: 'council',
+    title: 'East Park playground equipment',
+    description: 'Which type of equipment should replace the aging playground structure at East Park?',
+    proposer: 'Parks & Recreation',
+    type: 'ranked-choice',
+    created: now - 35 * DAY,
+    pruningDeadline: now - 25 * DAY,
+    votingDeadline: now - 18 * DAY,
+    options: [
+      { id: 'p4o1', label: 'Climbing structure', description: 'Multi-level climbing and sliding complex, ages 5-12', submitter: 'Parks & Recreation', upvotes: [] },
+      { id: 'p4o2', label: 'Swing set expansion', description: 'Expanded swing area with accessible swings', submitter: 'Resident', upvotes: [] },
+      { id: 'p4o3', label: 'Sandbox and water play', description: 'Natural play area with sand and seasonal water feature', submitter: 'Resident', upvotes: [] },
+    ],
+    prunedOptions: [],
+    votes: {},
+    result: {
+      winner: 'p4o1', tier: 'T1',
+      rounds: [
+        { counts: { p4o1: 38, p4o2: 28, p4o3: 19 }, eliminated: 'p4o3' },
+        { counts: { p4o1: 51, p4o2: 34 }, eliminated: null },
+      ],
+      totalVotes: 85,
+      councilAction: 'honored',
+      councilNote: 'Work order filed. Installation scheduled October 2026.',
+    },
+  },
+  {
+    id: 'p5', status: 'decided', origin: 'council',
+    title: 'Public space camera policy',
+    description: 'Should the city deploy surveillance cameras in public parks and plazas? All deployment options were evaluated against Acequia Protocol governance standards.',
+    proposer: 'Public Safety Committee',
+    type: 'ranked-choice',
+    created: now - 45 * DAY,
+    pruningDeadline: now - 35 * DAY,
+    votingDeadline: now - 28 * DAY,
+    options: [
+      { id: 'p5o1', label: 'Full deployment with headgate', description: 'All public spaces, data governed under Acequia Protocol, library custody', submitter: 'Public Safety Committee', upvotes: [] },
+      { id: 'p5o2', label: 'Limited deployment, parks only', description: 'Parks and playgrounds only, headgate controls, 90-day retention limit', submitter: 'Resident', upvotes: [] },
+      { id: 'p5o3', label: 'No deployment', description: 'Decline all public surveillance cameras', submitter: 'Resident', upvotes: [] },
+      { id: 'p5o4', label: 'Defer to next budget cycle', description: 'Table until governance framework is fully ratified', submitter: 'Resident', upvotes: [] },
+    ],
+    prunedOptions: [],
+    votes: {},
+    result: {
+      winner: 'p5o1', tier: 'T2',
+      rounds: [
+        { counts: { p5o1: 35, p5o2: 32, p5o3: 25, p5o4: 18 }, eliminated: 'p5o4' },
+        { counts: { p5o1: 41, p5o2: 40, p5o3: 29 }, eliminated: 'p5o3' },
+        { counts: { p5o1: 56, p5o2: 54 }, eliminated: null },
+      ],
+      totalVotes: 110,
+      councilAction: 'honored',
+      councilNote: 'Council honored community lean. Adopted full deployment with headgate controls. Vote was close -- community was divided and the margin is on the record.',
+    },
+  },
+  {
+    id: 'p6', status: 'decided', origin: 'council',
+    title: 'Data center development moratorium',
+    description: 'Should the county adopt a moratorium on data center development while enforceable standards for noise, water, electric cost, decommissioning, and transparency are drafted? A developer has filed to build a hyperscale facility within town limits.',
+    proposer: 'County Commissioners',
+    type: 'ranked-choice',
+    created: now - 90 * DAY,
+    pruningDeadline: now - 80 * DAY,
+    votingDeadline: now - 73 * DAY,
+    options: [
+      { id: 'p6o1', label: 'Adopt 12-month moratorium', description: 'Full pause on data center approvals while ordinance is drafted and adopted', submitter: 'Residents', upvotes: [] },
+      { id: 'p6o2', label: 'Adopt 6-month moratorium', description: 'Shorter pause, extendable by 6 months if needed', submitter: 'County Commissioners', upvotes: [] },
+      { id: 'p6o3', label: 'No moratorium, proceed with current rules', description: 'Allow applications under existing zoning categories', submitter: 'Resident', upvotes: [] },
+    ],
+    prunedOptions: [
+      { id: 'p6o4', label: 'Permanent ban on data centers', description: 'Prohibit data centers in the county entirely', submitter: 'Resident', upvotes: ['a','b','c'] },
+    ],
+    votes: {},
+    result: {
+      winner: 'p6o1', tier: 'T0',
+      rounds: [
+        { counts: { p6o1: 98, p6o2: 18, p6o3: 6 }, eliminated: 'p6o3' },
+        { counts: { p6o1: 102, p6o2: 20 }, eliminated: null },
+      ],
+      totalVotes: 122,
+      councilAction: 'honored',
+      councilNote: 'Community spoke with one voice. 12-month moratorium adopted. Commissioners noted T0 acclamation -- strongest possible community mandate. Ordinance drafting underway with HWC Engineering.',
+    },
+  },
+  {
+    id: 'p7', status: 'voting', origin: 'council',
+    title: 'Data center standard: electric grid cost allocation',
+    description: 'During the moratorium, the community is deciding each provision of the emerging technology ordinance. This proposal: who pays for the new substations and transmission lines a data center requires? Indiana law requires large users to cover at least 80% of the cost to serve them.',
+    proposer: 'Standards Working Group',
+    type: 'ranked-choice',
+    created: now - 10 * DAY,
+    pruningDeadline: now - 3 * DAY,
+    votingDeadline: now + 4 * DAY,
+    options: [
+      { id: 'p7o1', label: 'Developer pays 100%', description: 'All grid upgrades funded by the facility. No cost passed to residential ratepayers.', submitter: 'Residents', upvotes: new Array(52).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p7o2', label: 'Developer pays 80% (state minimum)', description: 'Meet the Indiana statutory floor. Remaining 20% absorbed by ratepayer base.', submitter: 'Standards Working Group', upvotes: new Array(28).fill(0).map((_,i)=>'u'+i) },
+      { id: 'p7o3', label: 'Negotiate case by case', description: 'No fixed standard. Each project negotiates cost allocation as a condition of approval.', submitter: 'Resident', upvotes: new Array(14).fill(0).map((_,i)=>'u'+i) },
+    ],
+    prunedOptions: [
+      { id: 'p7o4', label: 'Ratepayers split costs equally', description: 'Grid upgrades shared across all ratepayers as public infrastructure investment', submitter: 'Resident', upvotes: ['a','b'] },
+    ],
+    votes: genVotes(['p7o1','p7o2','p7o3'], 38, 0, 777),
+    result: null,
+  },
+];
+
+let view = 'list';
+let tab = 'active';
+let selectedId = null;
+let ranking = [];
+let hasVoted = {};
+let showRounds = {};
+try {
+  const sv = localStorage.getItem('acequia-votes');
+  if (sv) hasVoted = JSON.parse(sv);
+} catch(e) {}
+
+function saveVotes() {
+  try { localStorage.setItem('acequia-votes', JSON.stringify(hasVoted)); } catch(e) {}
+}
+
+function timeLeft(deadline) {
+  if (!deadline) return '';
+  const diff = deadline - Date.now();
+  if (diff <= 0) return 'Closed';
+  const d = Math.floor(diff / DAY);
+  const h = Math.floor((diff % DAY) / 3600000);
+  if (d > 0) return d + 'd ' + h + 'h left';
+  return h + 'h left';
+}
+
+function optById(p, id) {
+  return p.options.find(o => o.id === id) || (p.prunedOptions || []).find(o => o.id === id);
+}
+
+function tierLabel(t) {
+  return { T0: 'Acclamation', T1: 'Clear', T2: 'Close', T3: 'Inconclusive' }[t] || t;
+}
+function tierExplain(t) {
+  return {
+    T0: 'The community spoke with one voice.',
+    T1: 'Clear winner by ranked choice elimination.',
+    T2: 'Advisory to Council. Community leaned but did not reach clear signal.',
+    T3: 'No clear signal. Council decides with full community input on the record.',
+  }[t] || '';
+}
+
+function runRCV(opts, allVotes) {
+  const optIds = opts.map(o => o.id);
+  let remaining = [...optIds];
+  const ballots = Object.values(allVotes).map(r => [...r]);
+  const rounds = [];
+  while (remaining.length > 1) {
+    const counts = {};
+    remaining.forEach(id => counts[id] = 0);
+    ballots.forEach(b => {
+      const pick = b.find(id => remaining.includes(id));
+      if (pick) counts[pick]++;
+    });
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    if (total === 0) break;
+    if (sorted[0][1] > total / 2) {
+      rounds.push({ counts: {...counts}, eliminated: null });
+      break;
+    }
+    const elim = sorted[sorted.length - 1][0];
+    rounds.push({ counts: {...counts}, eliminated: elim });
+    remaining = remaining.filter(id => id !== elim);
+  }
+  if (rounds.length === 0 || (rounds[rounds.length-1].eliminated !== null && remaining.length === 1)) {
+    const counts = {};
+    remaining.forEach(id => counts[id] = 0);
+    ballots.forEach(b => {
+      const pick = b.find(id => remaining.includes(id));
+      if (pick) counts[pick]++;
+    });
+    rounds.push({ counts, eliminated: null });
+  }
+  const fc = rounds[rounds.length-1].counts;
+  const total = Object.values(fc).reduce((a,b)=>a+b,0);
+  const winner = Object.entries(fc).sort((a,b)=>b[1]-a[1])[0]?.[0];
+  return { winner, rounds, totalVotes: total };
+}
+
+function computeTier(rcv, communitySize) {
+  const participation = rcv.totalVotes / communitySize;
+  if (participation < CONFIG.t2Minimum) return 'T3';
+  const fc = rcv.rounds[rcv.rounds.length-1].counts;
+  const total = rcv.totalVotes;
+  const wv = fc[rcv.winner] || 0;
+  if (wv / total >= CONFIG.t0Threshold) return 'T0';
+  const sorted = Object.values(fc).sort((a,b)=>b-a);
+  const margin = (sorted[0] - (sorted[1]||0)) / total;
+  if (margin >= CONFIG.t1Confidence) return 'T1';
+  return 'T2';
+}
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = `<div class="wrap">
+    ${renderHeader()}
+    ${renderTabs()}
+    <div class="view">${renderMain()}</div>
+  </div>`;
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.bar-fill[data-w]').forEach(el => {
+      el.style.width = el.dataset.w;
+    });
+  });
+}
+
+function renderHeader() {
+  return `<div class="hdr">
+    <div class="hdr-title">Acequia</div>
+    <div class="hdr-community">${CONFIG.communityName}</div>
+    <div class="hdr-tagline">Degrade to democracy.</div>
+    <div class="hdr-line"></div>
+  </div>`;
+}
+
+function renderTabs() {
+  return `<div class="tabs">
+    <button class="tab ${tab==='active'&&view==='list'?'active':''}" data-action="tab" data-tab="active">Active</button>
+    <button class="tab ${tab==='decided'&&view==='list'?'active':''}" data-action="tab" data-tab="decided">Decided</button>
+    <button class="tab tab-new" data-action="tab" data-tab="new">+ New Petition</button>
+  </div>`;
+}
+
+function renderMain() {
+  if (view === 'detail') return renderDetail();
+  if (view === 'new') return renderNewForm();
+  if (tab === 'decided') return renderDecidedList();
+  return renderActiveList();
+}
+
+function renderActiveList() {
+  const active = proposals.filter(p => p.status === 'pruning' || p.status === 'voting');
+  const official = active.filter(p => p.origin === 'council');
+  const petitions = active.filter(p => p.origin === 'community');
+  let html = '';
+  if (official.length) {
+    html += `<div class="origin-header"><span class="origin-dot official"></span>Official Decisions</div>`;
+    const oPruning = official.filter(p => p.status === 'pruning');
+    const oVoting = official.filter(p => p.status === 'voting');
+    if (oPruning.length) { html += `<div class="phase-label">Pruning</div>`; oPruning.forEach(p => html += renderCard(p)); }
+    if (oVoting.length) { html += `<div class="phase-label"${oPruning.length?' style="margin-top:20px"':''}>Voting</div>`; oVoting.forEach(p => html += renderCard(p)); }
+  }
+  if (petitions.length) {
+    html += `<div class="origin-header"${official.length?' style="margin-top:28px"':''}><span class="origin-dot petition"></span>Community Petitions</div>`;
+    const cPruning = petitions.filter(p => p.status === 'pruning');
+    const cVoting = petitions.filter(p => p.status === 'voting');
+    if (cPruning.length) { html += `<div class="phase-label">Pruning</div>`; cPruning.forEach(p => html += renderCard(p)); }
+    if (cVoting.length) { html += `<div class="phase-label"${cPruning.length?' style="margin-top:20px"':''}>Voting</div>`; cVoting.forEach(p => html += renderCard(p)); }
+  }
+  if (!active.length) {
+    html += `<div class="empty">No active proposals. Start one.</div>`;
+  }
+  return html;
+}
+
+function renderDecidedList() {
+  const decided = proposals.filter(p => p.status === 'decided');
+  if (!decided.length) return `<div class="empty">No decisions yet.</div>`;
+  const official = decided.filter(p => p.origin === 'council');
+  const petitions = decided.filter(p => p.origin === 'community');
+  let html = '';
+  if (official.length) {
+    html += `<div class="origin-header"><span class="origin-dot official"></span>Official Decisions</div>`;
+    official.forEach(p => html += renderCard(p));
+  }
+  if (petitions.length) {
+    html += `<div class="origin-header"${official.length?' style="margin-top:28px"':''}><span class="origin-dot petition"></span>Community Petitions</div>`;
+    petitions.forEach(p => html += renderCard(p));
+  }
+  return html;
+}
+
+function renderCard(p) {
+  const badge = p.status === 'pruning' ? `<span class="badge badge-pruning">Pruning</span>`
+    : p.status === 'voting' ? `<span class="badge badge-voting">Voting</span>`
+    : p.result ? `<span class="badge badge-${p.result.tier.toLowerCase()}">${p.result.tier} &middot; ${tierLabel(p.result.tier)}</span>` : '';
+
+  const opts = p.options.length;
+  const deadline = p.status === 'pruning' ? p.pruningDeadline : p.votingDeadline;
+  const voteCount = Object.keys(p.votes).length;
+
+  let meta = `<span>${opts} option${opts!==1?'s':''}</span>`;
+  if (p.status === 'voting') meta += `<span>${voteCount} vote${voteCount!==1?'s':''}</span>`;
+  if (p.status === 'decided' && p.result) {
+    const w = optById(p, p.result.winner);
+    meta += `<span>Winner: ${w ? w.label : '?'}</span>`;
+  }
+  if (deadline && p.status !== 'decided') meta += `<span>${timeLeft(deadline)}</span>`;
+  meta += `<span>by ${p.proposer}</span>`;
+
+  return `<div class="card" data-action="open" data-id="${p.id}">
+    <div class="card-top">${badge}<div class="card-title">${p.title}</div></div>
+    <div class="card-desc">${p.description}</div>
+    <div class="card-meta">${meta}</div>
+  </div>`;
+}
+
+function renderDetail() {
+  const p = proposals.find(x => x.id === selectedId);
+  if (!p) return '';
+
+  const badge = p.status === 'pruning' ? `<span class="badge badge-pruning">Pruning</span>`
+    : p.status === 'voting' ? `<span class="badge badge-voting">Voting</span>`
+    : p.result ? `<span class="badge badge-${p.result.tier.toLowerCase()}">${p.result.tier} &middot; ${tierLabel(p.result.tier)}</span>` : '';
+
+  const deadline = p.status === 'pruning' ? p.pruningDeadline : p.votingDeadline;
+
+  const originBadge = p.origin === 'council'
+    ? `<span class="badge badge-official">Official</span>`
+    : `<span class="badge badge-petition">Petition</span>`;
+
+  let html = `<button class="back-btn" data-action="back">&larr; All proposals</button>
+    <div class="detail-hdr">
+      <div class="detail-title">${p.title}</div>
+      <div class="detail-meta">${originBadge}${badge}
+        <span>${p.type}</span>
+        <span>by ${p.proposer}</span>
+        ${deadline && p.status !== 'decided' ? `<span>${timeLeft(deadline)}</span>` : ''}
+      </div>
+      <div class="detail-desc">${p.description}</div>
+    </div>`;
+
+  if (p.status === 'pruning') html += renderPruning(p);
+  else if (p.status === 'voting') html += renderVoting(p);
+  else if (p.status === 'decided') html += renderDecided(p);
+
+  html += renderDemoControls(p);
+  return html;
+}
+
+function renderPruning(p) {
+  const threshold = CONFIG.pruningThreshold;
+  let html = `<div class="section-label">Options (${threshold}+ upvotes to reach ballot)</div><div class="opt-list">`;
+
+  const sorted = [...p.options].sort((a,b) => b.upvotes.length - a.upvotes.length);
+  sorted.forEach(o => {
+    const voted = o.upvotes.includes(viewerId);
+    const above = o.upvotes.length >= threshold;
+    const needed = threshold - o.upvotes.length;
+    html += `<div class="opt-item">
+      <div class="opt-info">
+        <div class="opt-label">${o.label}${above ? '' : ` <span style="color:var(--muted-light);font-size:11px;font-weight:400">(needs ${needed} more)</span>`}</div>
+        ${o.description ? `<div class="opt-desc">${o.description}</div>` : ''}
+        <div class="opt-submitter">${o.submitter}</div>
+      </div>
+      <button class="upvote ${voted?'voted':''}" data-action="upvote" data-pid="${p.id}" data-oid="${o.id}">
+        <span class="upvote-arrow">${voted?'&#9650;':'&#9651;'}</span>
+        <span class="upvote-count">${o.upvotes.length}</span>
+      </button>
+    </div>`;
+  });
+  html += '</div>';
+
+  html += `<div class="add-opt">
+    <input type="text" id="new-opt-input" placeholder="Suggest an option..." maxlength="80">
+    <button class="btn btn-ghost" data-action="add-option" data-pid="${p.id}">Add</button>
+  </div>`;
+  return html;
+}
+
+function renderVoting(p) {
+  const myVote = hasVoted[p.id];
+  if (myVote && !ranking.length) {
+    const voteCount = Object.keys(p.votes).length;
+    return `<div class="voted-msg">Vote submitted. Your ranking is recorded.</div>
+      <div class="vote-footer">
+        <div class="vote-status">${voteCount} of ~${CONFIG.communitySize} voted</div>
+        <button class="btn btn-ghost" data-action="change-vote" data-pid="${p.id}">Change vote</button>
+      </div>`;
+  }
+
+  const ballotIds = p.options.map(o => o.id);
+  const rankedIds = ranking;
+  const unranked = ballotIds.filter(id => !rankedIds.includes(id));
+
+  let html = `<div class="vote-ui">
+    <div class="section-label">Your ranking</div>`;
+
+  if (rankedIds.length === 0) {
+    html += `<div class="rank-empty">Click options below to rank them in order of preference</div>`;
+  } else {
+    html += `<div class="rank-list">`;
+    rankedIds.forEach((id, i) => {
+      const o = optById(p, id);
+      html += `<div class="rank-item">
+        <span class="rank-num">${i+1}.</span>
+        <span class="rank-label">${o ? o.label : id}</span>
+        <div class="rank-btns">
+          ${i > 0 ? `<button class="rank-btn" data-action="rank-up" data-idx="${i}" title="Move up">&uarr;</button>` : ''}
+          ${i < rankedIds.length-1 ? `<button class="rank-btn" data-action="rank-down" data-idx="${i}" title="Move down">&darr;</button>` : ''}
+          <button class="rank-btn" data-action="rank-remove" data-idx="${i}" title="Remove">&times;</button>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  if (unranked.length) {
+    html += `<div class="section-label" style="margin-top:16px">Options</div>
+      <div class="chip-grid">`;
+    unranked.forEach(id => {
+      const o = optById(p, id);
+      html += `<button class="chip" data-action="rank-add" data-oid="${id}">${o ? o.label : id}</button>`;
+    });
+    html += `</div>`;
+  }
+
+  const allRanked = unranked.length === 0 && rankedIds.length > 0;
+  const voteCount = Object.keys(p.votes).length;
+
+  html += `<div class="vote-footer">
+    <button class="btn btn-primary" data-action="submit-vote" data-pid="${p.id}" ${allRanked?'':'disabled'}>Submit vote</button>
+    <div class="vote-status">${voteCount} of ~${CONFIG.communitySize} voted</div>
+  </div>`;
+
+  if ((p.prunedOptions || []).length) {
+    html += `<div class="section-label" style="margin-top:24px">Pruned (below threshold)</div><div class="opt-list">`;
+    p.prunedOptions.forEach(o => {
+      html += `<div class="opt-item pruned"><div class="opt-info">
+        <div class="opt-label">${o.label}</div>
+        ${o.description ? `<div class="opt-desc">${o.description}</div>` : ''}
+      </div><div style="font-size:12px;color:var(--muted-light)">${o.upvotes.length} upvotes</div></div>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function renderDecided(p) {
+  const r = p.result;
+  if (!r) return '';
+  const w = optById(p, r.winner);
+  const finalCounts = r.rounds[r.rounds.length - 1].counts;
+  const total = r.totalVotes;
+
+  let html = `<div class="tier-box ${r.tier.toLowerCase()}">
+    <div class="tier-code">${r.tier} &middot; ${tierLabel(r.tier)}</div>
+    <div class="tier-winner">${w ? w.label : '?'}</div>
+    <div class="tier-explain">${tierExplain(r.tier)}</div>
+  </div>`;
+
+  const sorted = Object.entries(finalCounts).sort((a,b) => b[1] - a[1]);
+  html += `<div class="section-label">Final distribution (${total} votes)</div><div class="bar-list">`;
+  sorted.forEach(([id, count]) => {
+    const o = optById(p, id);
+    const pct = Math.round(count / total * 100);
+    const isWinner = id === r.winner;
+    html += `<div class="bar-row ${isWinner?'winner':''}">
+      <span class="bar-label">${o ? o.label : id}</span>
+      <div class="bar-track"><div class="bar-fill" data-w="${pct}%"></div></div>
+      <span class="bar-pct">${pct}%</span>
+    </div>`;
+  });
+  html += `</div>`;
+
+  if (r.rounds.length > 1) {
+    const rid = 'rounds-' + p.id;
+    const show = showRounds[p.id];
+    html += `<button class="rounds-toggle" data-action="toggle-rounds" data-pid="${p.id}">${show ? 'Hide' : 'Show'} elimination rounds</button>`;
+    if (show) {
+      html += `<div class="rounds-detail">`;
+      r.rounds.forEach((rd, i) => {
+        const entries = Object.entries(rd.counts).sort((a,b)=>b[1]-a[1]);
+        const rdTotal = Object.values(rd.counts).reduce((a,b)=>a+b,0);
+        html += `<div style="margin:6px 0"><strong>Round ${i+1}:</strong> `;
+        html += entries.map(([id, c]) => {
+          const o = optById(p, id);
+          return `${o?o.label:id} ${c} (${Math.round(c/rdTotal*100)}%)`;
+        }).join(' / ');
+        if (rd.eliminated) {
+          const eo = optById(p, rd.eliminated);
+          html += ` &mdash; <em>${eo?eo.label:rd.eliminated} eliminated</em>`;
+        }
+        html += `</div>`;
+      });
+      html += `</div>`;
+    }
+  }
+
+  if (r.councilAction) {
+    const icon = r.councilAction === 'honored' ? '&#10003;' : '&#9888;';
+    html += `<div class="council-action">
+      <span class="ca-icon">${icon}</span>
+      <div class="ca-text"><strong>Council ${r.councilAction}</strong>${r.councilNote ? ' &mdash; ' + r.councilNote : ''}</div>
+    </div>`;
+  }
+
+  return html;
+}
+
+function renderDemoControls(p) {
+  let btn = '';
+  if (p.status === 'pruning') {
+    btn = `<button class="btn btn-ghost" data-action="advance" data-pid="${p.id}">Advance to Voting &rarr;</button>`;
+  } else if (p.status === 'voting') {
+    btn = `<button class="btn btn-ghost" data-action="close-voting" data-pid="${p.id}">Close Voting &rarr;</button>`;
+  }
+  if (!btn) return '';
+  return `<div class="demo-bar"><div class="demo-label">Demo Controls</div>${btn}</div>`;
+}
+
+function renderNewForm() {
+  return `<div class="form-wrap view">
+    <button class="back-btn" data-action="back">&larr; Back</button>
+    <div class="detail-title" style="margin-bottom:4px">New Community Petition</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:20px">Anyone can start a petition. It enters pruning, then goes to a community vote. Official decisions are created by the Town Council.</div>
+    <div class="form-group">
+      <label class="form-label">Title</label>
+      <input class="form-input" id="np-title" placeholder="What is being decided?" maxlength="120">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description</label>
+      <textarea class="form-input" id="np-desc" placeholder="Context, constraints, why this matters..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Voting method</label>
+      <select class="form-input" id="np-type">
+        <option value="ranked-choice">Ranked choice</option>
+        <option value="poll">Simple poll</option>
+        <option value="approval">Approval voting</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" data-action="create-proposal">Create Proposal</button>
+  </div>`;
+}
+
+document.getElementById('app').addEventListener('click', e => {
+  const btn = e.target.closest('[data-action]');
+  if (!btn) return;
+  const action = btn.dataset.action;
+
+  if (action === 'tab') {
+    const t = btn.dataset.tab;
+    if (t === 'new') { view = 'new'; }
+    else { view = 'list'; tab = t; }
+    selectedId = null; ranking = [];
+    render();
+  }
+  else if (action === 'open') {
+    selectedId = btn.dataset.id;
+    view = 'detail'; ranking = [];
+    render();
+  }
+  else if (action === 'back') {
+    view = 'list'; selectedId = null; ranking = [];
+    render();
+  }
+  else if (action === 'upvote') {
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    const o = p && p.options.find(x => x.id === btn.dataset.oid);
+    if (!o) return;
+    const idx = o.upvotes.indexOf(viewerId);
+    if (idx >= 0) o.upvotes.splice(idx, 1);
+    else o.upvotes.push(viewerId);
+    render();
+    const el = document.querySelector(`[data-oid="${btn.dataset.oid}"] .upvote-count`);
+    if (el) el.classList.add('upvote-pop');
+  }
+  else if (action === 'add-option') {
+    const input = document.getElementById('new-opt-input');
+    const val = input && input.value.trim();
+    if (!val) return;
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    if (!p) return;
+    p.options.push({
+      id: 'o' + Date.now(),
+      label: val,
+      description: '',
+      submitter: 'You',
+      upvotes: [viewerId],
+    });
+    render();
+  }
+  else if (action === 'rank-add') {
+    ranking.push(btn.dataset.oid);
+    render();
+  }
+  else if (action === 'rank-remove') {
+    ranking.splice(parseInt(btn.dataset.idx), 1);
+    render();
+  }
+  else if (action === 'rank-up') {
+    const i = parseInt(btn.dataset.idx);
+    if (i > 0) { [ranking[i-1], ranking[i]] = [ranking[i], ranking[i-1]]; }
+    render();
+  }
+  else if (action === 'rank-down') {
+    const i = parseInt(btn.dataset.idx);
+    if (i < ranking.length - 1) { [ranking[i], ranking[i+1]] = [ranking[i+1], ranking[i]]; }
+    render();
+  }
+  else if (action === 'submit-vote') {
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    if (!p || !ranking.length) return;
+    p.votes[viewerId] = [...ranking];
+    hasVoted[p.id] = true;
+    saveVotes();
+    ranking = [];
+    render();
+  }
+  else if (action === 'change-vote') {
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    if (!p) return;
+    ranking = p.votes[viewerId] ? [...p.votes[viewerId]] : [];
+    delete hasVoted[p.id];
+    saveVotes();
+    render();
+  }
+  else if (action === 'advance') {
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    if (!p) return;
+    const surviving = p.options.filter(o => o.upvotes.length >= CONFIG.pruningThreshold);
+    const pruned = p.options.filter(o => o.upvotes.length < CONFIG.pruningThreshold);
+    if (surviving.length < CONFIG.minBallotSize) {
+      alert('Not enough options above the pruning threshold (' + CONFIG.pruningThreshold + ' upvotes). Need at least ' + CONFIG.minBallotSize + '.');
+      return;
+    }
+    p.prunedOptions = [...(p.prunedOptions || []), ...pruned];
+    p.options = surviving;
+    p.status = 'voting';
+    p.votingDeadline = Date.now() + CONFIG.votingPeriod * DAY;
+    render();
+  }
+  else if (action === 'close-voting') {
+    const p = proposals.find(x => x.id === btn.dataset.pid);
+    if (!p) return;
+    const rcv = runRCV(p.options, p.votes);
+    const tier = computeTier(rcv, CONFIG.communitySize);
+    p.result = {
+      winner: rcv.winner,
+      tier: tier,
+      rounds: rcv.rounds,
+      totalVotes: rcv.totalVotes,
+      councilAction: (tier === 'T0' || tier === 'T1') ? 'honored' : null,
+      councilNote: (tier === 'T0' || tier === 'T1') ? null
+        : tier === 'T2' ? 'Awaiting Council decision. Community lean is on the record.'
+        : 'Inconclusive. Council may re-open, decide, or table.',
+    };
+    p.status = 'decided';
+    tab = 'decided';
+    render();
+  }
+  else if (action === 'toggle-rounds') {
+    showRounds[btn.dataset.pid] = !showRounds[btn.dataset.pid];
+    render();
+  }
+  else if (action === 'create-proposal') {
+    const title = document.getElementById('np-title')?.value.trim();
+    const desc = document.getElementById('np-desc')?.value.trim();
+    const type = document.getElementById('np-type')?.value || 'ranked-choice';
+    if (!title) { alert('Title is required.'); return; }
+    proposals.unshift({
+      id: 'p' + Date.now(),
+      status: 'pruning',
+      origin: 'community',
+      title, description: desc || '',
+      proposer: 'You',
+      type,
+      created: Date.now(),
+      pruningDeadline: Date.now() + CONFIG.pruningPeriod * DAY,
+      votingDeadline: null,
+      options: [],
+      prunedOptions: [],
+      votes: {},
+      result: null,
+    });
+    view = 'list'; tab = 'active';
+    render();
+  }
+});
+
+render();
+</script>

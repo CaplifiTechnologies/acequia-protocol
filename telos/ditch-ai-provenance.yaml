@@ -1,0 +1,17 @@
+id: ditch-ai-provenance
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  The chain from ore to inference is verifiable so supply chain claims are
+  receipts, not marketing -- every link attested, folded for commercial
+  privacy, publicly anchored.
+anti_telos: >
+  Provenance is a press release. "Ethically sourced" with no receipt.
+  "Sustainable compute" with no measurement. The claim cannot be checked
+  because the chain was never recorded.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

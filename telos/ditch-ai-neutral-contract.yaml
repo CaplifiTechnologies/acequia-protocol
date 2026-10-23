@@ -1,0 +1,17 @@
+id: ditch-ai-neutral-contract
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  Contracts survive vendor changes so principals are never locked in --
+  measurement, pay, and proof live in the contract, not in the vendor's
+  proprietary stack.
+anti_telos: >
+  The contract dies when the vendor leaves. Measurement is proprietary.
+  Data formats are vendor-specific. Switching costs are the moat. The
+  principal cannot leave with their own records.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

@@ -1,0 +1,18 @@
+id: ditch-ai
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+telos: >
+  A shared table where the material supply chain under AI governs itself --
+  so no single node captures the mesh, and the intelligence layer answers to
+  the water, ore, power, and labor it depends on rather than the reverse.
+anti_telos: >
+  No table. Each node captured by the one above it. The intelligence layer
+  governs the material layer it depends on, and the material layer has no
+  voice.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+    - slopstream
+  products: []

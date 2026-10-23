@@ -1,0 +1,336 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gear tooth pattern for reuse -->
+    <pattern id="t-crosshatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b5a48" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <!-- Ground shadow gradient -->
+    <radialGradient id="t-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1b241c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1b241c" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shell plate gradient -->
+    <linearGradient id="t-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a48"/>
+      <stop offset="40%" stop-color="#a8834e"/>
+      <stop offset="100%" stop-color="#6b5a48"/>
+    </linearGradient>
+    <linearGradient id="t-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a6658"/>
+      <stop offset="50%" stop-color="#7a8678"/>
+      <stop offset="100%" stop-color="#5a6658"/>
+    </linearGradient>
+    <linearGradient id="t-dark-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b5a48"/>
+      <stop offset="50%" stop-color="#8a6a48"/>
+      <stop offset="100%" stop-color="#5a4a38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="530" rx="200" ry="30" fill="url(#t-shadow)"/>
+
+  <!-- === BACK LEGS === -->
+  <!-- Back left leg -->
+  <g>
+    <!-- Upper segment -->
+    <rect x="195" y="430" width="28" height="50" rx="4" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <rect x="199" y="435" width="20" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="199" y="448" width="20" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Knee gear joint -->
+    <circle cx="209" cy="480" r="12" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="209" cy="480" r="8" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Gear teeth on knee -->
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="209" y1="467" x2="209" y2="471"/>
+      <line x1="221" y1="480" x2="217" y2="480"/>
+      <line x1="209" y1="493" x2="209" y2="489"/>
+      <line x1="197" y1="480" x2="201" y2="480"/>
+      <line x1="217" y1="471" x2="214" y2="474"/>
+      <line x1="217" y1="489" x2="214" y2="486"/>
+      <line x1="201" y1="471" x2="204" y2="474"/>
+      <line x1="201" y1="489" x2="204" y2="486"/>
+    </g>
+    <circle cx="209" cy="480" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Lower segment -->
+    <rect x="197" y="490" width="24" height="35" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Foot -->
+    <ellipse cx="209" cy="525" rx="18" ry="8" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="197" y1="525" x2="200" y2="518" stroke="#1b241c" stroke-width="1"/>
+    <line x1="221" y1="525" x2="218" y2="518" stroke="#1b241c" stroke-width="1"/>
+  </g>
+
+  <!-- Back right leg -->
+  <g>
+    <rect x="375" y="430" width="28" height="50" rx="4" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <rect x="379" y="435" width="20" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="379" y="448" width="20" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="389" cy="480" r="12" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="389" cy="480" r="8" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="389" y1="467" x2="389" y2="471"/>
+      <line x1="401" y1="480" x2="397" y2="480"/>
+      <line x1="389" y1="493" x2="389" y2="489"/>
+      <line x1="377" y1="480" x2="381" y2="480"/>
+      <line x1="397" y1="471" x2="394" y2="474"/>
+      <line x1="397" y1="489" x2="394" y2="486"/>
+      <line x1="381" y1="471" x2="384" y2="474"/>
+      <line x1="381" y1="489" x2="384" y2="486"/>
+    </g>
+    <circle cx="389" cy="480" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="377" y="490" width="24" height="35" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <ellipse cx="389" cy="525" rx="18" ry="8" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="377" y1="525" x2="380" y2="518" stroke="#1b241c" stroke-width="1"/>
+    <line x1="401" y1="525" x2="398" y2="518" stroke="#1b241c" stroke-width="1"/>
+  </g>
+
+  <!-- === BODY / UNDERSHELL === -->
+  <ellipse cx="300" cy="420" rx="140" ry="35" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Underbody gear mechanism visible -->
+  <circle cx="270" cy="420" r="15" fill="none" stroke="#3d6b78" stroke-width="1" opacity="0.6"/>
+  <circle cx="270" cy="420" r="10" fill="none" stroke="#3d6b78" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="330" cy="420" r="12" fill="none" stroke="#3d6b78" stroke-width="1" opacity="0.6"/>
+
+  <!-- === FRONT LEGS === -->
+  <!-- Front left leg -->
+  <g>
+    <rect x="168" y="410" width="30" height="55" rx="4" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <rect x="172" y="415" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="172" y="428" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="172" y="441" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Knee gear joint -->
+    <circle cx="183" cy="465" r="14" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="183" cy="465" r="9" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Gear teeth -->
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="183" y1="450" x2="183" y2="454"/>
+      <line x1="197" y1="465" x2="193" y2="465"/>
+      <line x1="183" y1="480" x2="183" y2="476"/>
+      <line x1="169" y1="465" x2="173" y2="465"/>
+      <line x1="193" y1="454" x2="190" y2="457"/>
+      <line x1="193" y1="476" x2="190" y2="473"/>
+      <line x1="173" y1="454" x2="176" y2="457"/>
+      <line x1="173" y1="476" x2="176" y2="473"/>
+    </g>
+    <circle cx="183" cy="465" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Lower leg -->
+    <rect x="171" y="477" width="24" height="38" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Foot -->
+    <ellipse cx="183" cy="518" rx="20" ry="9" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="169" y1="518" x2="173" y2="508" stroke="#1b241c" stroke-width="1"/>
+    <line x1="197" y1="518" x2="193" y2="508" stroke="#1b241c" stroke-width="1"/>
+  </g>
+
+  <!-- Front right leg -->
+  <g>
+    <rect x="398" y="410" width="30" height="55" rx="4" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <rect x="402" y="415" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="402" y="428" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <rect x="402" y="441" width="22" height="8" rx="2" fill="url(#t-crosshatch)" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="413" cy="465" r="14" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="413" cy="465" r="9" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="413" y1="450" x2="413" y2="454"/>
+      <line x1="427" y1="465" x2="423" y2="465"/>
+      <line x1="413" y1="480" x2="413" y2="476"/>
+      <line x1="399" y1="465" x2="403" y2="465"/>
+      <line x1="423" y1="454" x2="420" y2="457"/>
+      <line x1="423" y1="476" x2="420" y2="473"/>
+      <line x1="403" y1="454" x2="406" y2="457"/>
+      <line x1="403" y1="476" x2="406" y2="473"/>
+    </g>
+    <circle cx="413" cy="465" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="401" y="477" width="24" height="38" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <ellipse cx="413" cy="518" rx="20" ry="9" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="399" y1="518" x2="403" y2="508" stroke="#1b241c" stroke-width="1"/>
+    <line x1="427" y1="518" x2="423" y2="508" stroke="#1b241c" stroke-width="1"/>
+  </g>
+
+  <!-- === SHELL - main dome === -->
+  <!-- Shell base layer -->
+  <path d="M160,400 Q160,260 300,230 Q440,260 440,400 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="2"/>
+
+  <!-- Shell plate divisions - hexagonal-ish pattern -->
+  <!-- Top plate -->
+  <path d="M265,245 L335,245 L350,290 L300,310 L250,290 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Upper left plate -->
+  <path d="M210,280 L265,245 L250,290 L220,320 L185,310 Z" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Upper right plate -->
+  <path d="M335,245 L390,280 L415,310 L380,320 L350,290 Z" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Middle left plate -->
+  <path d="M170,345 L185,310 L220,320 L230,360 L190,370 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Center left plate -->
+  <path d="M220,320 L250,290 L300,310 L295,360 L230,360 Z" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5" opacity="0.7"/>
+  <!-- Center right plate -->
+  <path d="M300,310 L350,290 L380,320 L370,360 L295,360 Z" fill="url(#t-steel)" stroke="#1b241c" stroke-width="1.5" opacity="0.7"/>
+  <!-- Middle right plate -->
+  <path d="M380,320 L415,310 L430,345 L410,370 L370,360 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Lower left plate -->
+  <path d="M165,390 L190,370 L230,360 L240,400 L175,400 Z" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Lower center plate -->
+  <path d="M230,360 L295,360 L300,400 L240,400 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Lower center-right plate -->
+  <path d="M295,360 L370,360 L360,400 L300,400 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Lower right plate -->
+  <path d="M370,360 L410,370 L435,390 L425,400 L360,400 Z" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+
+  <!-- === INTERNAL CLOCKWORK visible through gaps between plates === -->
+  <!-- Gap mechanism 1 - large gear visible through center gap -->
+  <g opacity="0.85">
+    <!-- Main escapement wheel -->
+    <circle cx="300" cy="330" r="22" fill="none" stroke="#3d6b78" stroke-width="1.5"/>
+    <circle cx="300" cy="330" r="18" fill="none" stroke="#3d6b78" stroke-width="0.8"/>
+    <circle cx="300" cy="330" r="4" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Gear teeth around escapement -->
+    <g stroke="#3d6b78" stroke-width="1" fill="none">
+      <line x1="300" y1="308" x2="300" y2="313"/>
+      <line x1="300" y1="347" x2="300" y2="352"/>
+      <line x1="278" y1="330" x2="283" y2="330"/>
+      <line x1="317" y1="330" x2="322" y2="330"/>
+      <line x1="285" y1="315" x2="288" y2="318"/>
+      <line x1="315" y1="315" x2="312" y2="318"/>
+      <line x1="285" y1="345" x2="288" y2="342"/>
+      <line x1="315" y1="345" x2="312" y2="342"/>
+      <line x1="290" y1="309" x2="292" y2="313"/>
+      <line x1="310" y1="309" x2="308" y2="313"/>
+      <line x1="290" y1="351" x2="292" y2="347"/>
+      <line x1="310" y1="351" x2="308" y2="347"/>
+    </g>
+    <!-- Secondary gear -->
+    <circle cx="270" cy="350" r="14" fill="none" stroke="#1f3f48" stroke-width="1.2"/>
+    <circle cx="270" cy="350" r="10" fill="none" stroke="#1f3f48" stroke-width="0.6"/>
+    <circle cx="270" cy="350" r="3" fill="#1f3f48" stroke="#1b241c" stroke-width="0.6"/>
+    <g stroke="#1f3f48" stroke-width="0.8" fill="none">
+      <line x1="270" y1="335" x2="270" y2="339"/>
+      <line x1="270" y1="361" x2="270" y2="365"/>
+      <line x1="256" y1="350" x2="260" y2="350"/>
+      <line x1="280" y1="350" x2="284" y2="350"/>
+      <line x1="260" y1="340" x2="263" y2="342"/>
+      <line x1="280" y1="340" x2="277" y2="342"/>
+      <line x1="260" y1="360" x2="263" y2="358"/>
+      <line x1="280" y1="360" x2="277" y2="358"/>
+    </g>
+    <!-- Tertiary gear -->
+    <circle cx="335" cy="345" r="11" fill="none" stroke="#1f3f48" stroke-width="1"/>
+    <circle cx="335" cy="345" r="7" fill="none" stroke="#1f3f48" stroke-width="0.5"/>
+    <circle cx="335" cy="345" r="2.5" fill="#1f3f48" stroke="#1b241c" stroke-width="0.5"/>
+    <g stroke="#1f3f48" stroke-width="0.7" fill="none">
+      <line x1="335" y1="333" x2="335" y2="336"/>
+      <line x1="335" y1="354" x2="335" y2="357"/>
+      <line x1="324" y1="345" x2="327" y2="345"/>
+      <line x1="343" y1="345" x2="346" y2="345"/>
+      <line x1="327" y1="337" x2="329" y2="339"/>
+      <line x1="343" y1="337" x2="341" y2="339"/>
+      <line x1="327" y1="353" x2="329" y2="351"/>
+      <line x1="343" y1="353" x2="341" y2="351"/>
+    </g>
+    <!-- Spring coils visible -->
+    <path d="M250,310 Q255,305 260,310 Q265,315 270,310 Q275,305 280,310" fill="none" stroke="#3d6b78" stroke-width="1" opacity="0.7"/>
+    <path d="M320,310 Q325,305 330,310 Q335,315 340,310 Q345,305 350,310" fill="none" stroke="#3d6b78" stroke-width="1" opacity="0.7"/>
+    <!-- Cam mechanism -->
+    <ellipse cx="300" cy="375" rx="10" ry="7" fill="none" stroke="#3d6b78" stroke-width="1" transform="rotate(15,300,375)"/>
+    <circle cx="300" cy="375" r="2" fill="#3d6b78"/>
+    <!-- Connecting rods -->
+    <line x1="283" y1="330" x2="270" y2="350" stroke="#3d6b78" stroke-width="0.8"/>
+    <line x1="317" y1="330" x2="335" y2="345" stroke="#3d6b78" stroke-width="0.8"/>
+  </g>
+
+  <!-- Rivet details on shell plates -->
+  <g fill="#6b5a48" stroke="#1b241c" stroke-width="0.5">
+    <circle cx="300" cy="255" r="2.5"/>
+    <circle cx="270" cy="270" r="2"/>
+    <circle cx="330" cy="270" r="2"/>
+    <circle cx="240" cy="300" r="2"/>
+    <circle cx="360" cy="300" r="2"/>
+    <circle cx="200" cy="330" r="2"/>
+    <circle cx="400" cy="330" r="2"/>
+    <circle cx="185" cy="365" r="2"/>
+    <circle cx="415" cy="365" r="2"/>
+    <circle cx="215" cy="385" r="2"/>
+    <circle cx="385" cy="385" r="2"/>
+    <circle cx="260" cy="395" r="2"/>
+    <circle cx="340" cy="395" r="2"/>
+  </g>
+
+  <!-- === WIND-UP KEY on top of shell === -->
+  <g>
+    <!-- Key shaft -->
+    <rect x="296" y="220" width="8" height="25" rx="2" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Key bow (the handle) -->
+    <path d="M280,195 L280,180 Q280,168 292,168 L308,168 Q320,168 320,180 L320,195" fill="none" stroke="#8a6a48" stroke-width="4"/>
+    <path d="M280,195 L280,180 Q280,168 292,168 L308,168 Q320,168 320,180 L320,195" fill="none" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Key shaft detail -->
+    <rect x="294" y="225" width="12" height="4" rx="1" fill="#6b5a48" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Key mounting plate -->
+    <ellipse cx="300" cy="240" rx="12" ry="6" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.2"/>
+    <ellipse cx="300" cy="240" rx="6" ry="3" fill="#5a6658" stroke="#1b241c" stroke-width="0.8"/>
+  </g>
+
+  <!-- === TAIL === -->
+  <g>
+    <!-- Tail segments -->
+    <rect x="430" y="395" width="18" height="12" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.2"/>
+    <rect x="445" y="393" width="15" height="10" rx="3" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.2"/>
+    <rect x="457" y="390" width="12" height="9" rx="3" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.2"/>
+    <rect x="467" y="388" width="10" height="7" rx="2" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <ellipse cx="480" cy="390" rx="6" ry="4" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Tiny joint pins -->
+    <circle cx="448" cy="398" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="460" cy="394" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="470" cy="391" r="1.2" fill="#3d6b78" stroke="#1b241c" stroke-width="0.5"/>
+  </g>
+
+  <!-- === HEAD AND NECK === -->
+  <g>
+    <!-- Telescoping brass neck - three nested segments -->
+    <!-- Outer sleeve -->
+    <rect x="120" y="375" width="45" height="30" rx="8" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="130" y1="375" x2="130" y2="405" stroke="#1b241c" stroke-width="0.5" opacity="0.4"/>
+    <line x1="140" y1="375" x2="140" y2="405" stroke="#1b241c" stroke-width="0.5" opacity="0.4"/>
+    <line x1="150" y1="375" x2="150" y2="405" stroke="#1b241c" stroke-width="0.5" opacity="0.4"/>
+    <!-- Middle sleeve -->
+    <rect x="95" y="378" width="30" height="24" rx="6" fill="url(#t-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Inner sleeve -->
+    <rect x="72" y="381" width="28" height="18" rx="5" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Neck joint rings -->
+    <ellipse cx="125" cy="390" rx="3" ry="15" fill="none" stroke="#1b241c" stroke-width="1"/>
+    <ellipse cx="98" cy="390" rx="3" ry="12" fill="none" stroke="#1b241c" stroke-width="1"/>
+
+    <!-- Head -->
+    <path d="M40,370 L75,375 L80,395 L75,405 L40,410 Q25,390 40,370 Z" fill="url(#t-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Head plates -->
+    <line x1="55" y1="373" x2="55" y2="407" stroke="#1b241c" stroke-width="0.8"/>
+    <line x1="45" y1="378" x2="45" y2="402" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Head rivets -->
+    <circle cx="60" cy="382" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.5"/>
+    <circle cx="60" cy="398" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.5"/>
+
+    <!-- Eye - lens assembly -->
+    <circle cx="38" cy="382" r="8" fill="#1f3f48" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="38" cy="382" r="5" fill="#3d6b78" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="38" cy="382" r="2.5" fill="#1b241c"/>
+    <circle cx="36" cy="380" r="1" fill="#efe6d4" opacity="0.6"/>
+    <!-- Lens rim detail -->
+    <circle cx="38" cy="382" r="7" fill="none" stroke="#8a6a48" stroke-width="0.5"/>
+
+    <!-- Mouth line -->
+    <line x1="30" y1="398" x2="50" y2="398" stroke="#1b241c" stroke-width="1"/>
+
+    <!-- Tiny beak/jaw plate -->
+    <path d="M28,395 L35,400 L28,405" fill="none" stroke="#1b241c" stroke-width="1"/>
+  </g>
+
+  <!-- === Additional shell texture - scale/plate marks === -->
+  <g stroke="#1b241c" stroke-width="0.4" fill="none" opacity="0.3">
+    <path d="M260,260 Q280,275 260,290"/>
+    <path d="M340,260 Q320,275 340,290"/>
+    <path d="M220,300 Q240,315 220,335"/>
+    <path d="M380,300 Q360,315 380,335"/>
+    <path d="M200,360 Q215,370 200,385"/>
+    <path d="M400,360 Q385,370 400,385"/>
+  </g>
+
+  <!-- Shell edge banding -->
+  <path d="M160,400 Q160,260 300,230 Q440,260 440,400" fill="none" stroke="#1b241c" stroke-width="2.5"/>
+  <path d="M165,398 Q165,265 300,235 Q435,265 435,398" fill="none" stroke="#8a6a48" stroke-width="0.8" opacity="0.5"/>
+</svg>

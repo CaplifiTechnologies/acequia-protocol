@@ -1,0 +1,380 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="h-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a48"/>
+      <stop offset="40%" stop-color="#a8834e"/>
+      <stop offset="100%" stop-color="#6b5a48"/>
+    </linearGradient>
+    <linearGradient id="h-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a6658"/>
+      <stop offset="50%" stop-color="#7a8678"/>
+      <stop offset="100%" stop-color="#5a6658"/>
+    </linearGradient>
+    <linearGradient id="h-dark-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b5a48"/>
+      <stop offset="50%" stop-color="#8a6a48"/>
+      <stop offset="100%" stop-color="#5a4a38"/>
+    </linearGradient>
+    <linearGradient id="h-copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a48"/>
+      <stop offset="30%" stop-color="#b8864c"/>
+      <stop offset="70%" stop-color="#a07848"/>
+      <stop offset="100%" stop-color="#8a6a48"/>
+    </linearGradient>
+    <linearGradient id="h-piston" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7a8678"/>
+      <stop offset="50%" stop-color="#5a6658"/>
+      <stop offset="100%" stop-color="#7a8678"/>
+    </linearGradient>
+    <radialGradient id="h-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1b241c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1b241c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="560" rx="220" ry="25" fill="url(#h-shadow)"/>
+
+  <!-- === TAIL === -->
+  <g>
+    <!-- Tail - thin articulated metal strips hanging down -->
+    <path d="M478,220 Q485,225 488,240" fill="none" stroke="#8a6a48" stroke-width="2"/>
+    <path d="M480,218 Q490,228 494,248 Q496,265 492,280" fill="none" stroke="#6b5a48" stroke-width="1.5"/>
+    <path d="M476,222 Q482,230 486,245 Q490,270 485,290" fill="none" stroke="#8a6a48" stroke-width="1.2"/>
+    <path d="M482,220 Q492,232 497,255 Q500,278 495,295" fill="none" stroke="#6b5a48" stroke-width="1"/>
+    <path d="M479,224 Q486,235 490,252 Q493,275 488,298" fill="none" stroke="#8a6a48" stroke-width="0.8"/>
+    <path d="M484,219 Q495,235 500,260 Q502,285 498,305" fill="none" stroke="#6b5a48" stroke-width="0.7"/>
+    <!-- Tail joint segments -->
+    <circle cx="482" cy="225" r="3" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.8"/>
+    <circle cx="490" cy="250" r="2.5" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.7"/>
+    <circle cx="492" cy="275" r="2" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === BACK LEGS === -->
+  <!-- Back left leg (further) -->
+  <g>
+    <!-- Upper thigh -->
+    <path d="M382,295 L398,290 L405,380 L385,385 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Knee piston mechanism -->
+    <rect x="385" y="370" width="22" height="8" rx="2" fill="url(#h-piston)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Knee gear -->
+    <circle cx="396" cy="388" r="14" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="396" cy="388" r="9" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.8" fill="none">
+      <line x1="396" y1="373" x2="396" y2="377"/><line x1="396" y1="399" x2="396" y2="403"/>
+      <line x1="381" y1="388" x2="385" y2="388"/><line x1="407" y1="388" x2="411" y2="388"/>
+      <line x1="386" y1="378" x2="388" y2="380"/><line x1="406" y1="378" x2="404" y2="380"/>
+      <line x1="386" y1="398" x2="388" y2="396"/><line x1="406" y1="398" x2="404" y2="396"/>
+      <line x1="383" y1="383" x2="385" y2="384"/><line x1="409" y1="383" x2="407" y2="384"/>
+      <line x1="383" y1="393" x2="385" y2="392"/><line x1="409" y1="393" x2="407" y2="392"/>
+    </g>
+    <circle cx="396" cy="388" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Cannon bone -->
+    <rect x="389" y="400" width="14" height="80" rx="3" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Piston rod alongside -->
+    <rect x="404" y="395" width="5" height="60" rx="1" fill="url(#h-piston)" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="403" y="420" width="7" height="12" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Fetlock joint -->
+    <circle cx="396" cy="482" r="8" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.2"/>
+    <circle cx="396" cy="482" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Hoof -->
+    <path d="M384,490 L408,490 L412,520 Q396,528 380,520 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="390" y1="494" x2="388" y2="518" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="396" y1="494" x2="396" y2="522" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="402" y1="494" x2="404" y2="518" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Horseshoe -->
+    <path d="M385,518 Q396,524 407,518" fill="none" stroke="#3d6b78" stroke-width="2"/>
+  </g>
+
+  <!-- Back right leg -->
+  <g>
+    <!-- Upper thigh -->
+    <path d="M415,285 L435,280 L442,375 L418,380 Z" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="420" y1="300" x2="434" y2="296" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="419" y1="320" x2="436" y2="316" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="418" y1="340" x2="438" y2="336" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="418" y1="360" x2="440" y2="356" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Knee piston -->
+    <rect x="416" y="365" width="26" height="10" rx="2" fill="url(#h-piston)" stroke="#1b241c" stroke-width="1.2"/>
+    <rect x="420" y="367" width="18" height="6" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Knee gear -->
+    <circle cx="430" cy="385" r="16" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="430" cy="385" r="11" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.9" fill="none">
+      <line x1="430" y1="368" x2="430" y2="373"/><line x1="430" y1="397" x2="430" y2="402"/>
+      <line x1="413" y1="385" x2="418" y2="385"/><line x1="442" y1="385" x2="447" y2="385"/>
+      <line x1="419" y1="374" x2="421" y2="376"/><line x1="441" y1="374" x2="439" y2="376"/>
+      <line x1="419" y1="396" x2="421" y2="394"/><line x1="441" y1="396" x2="439" y2="394"/>
+      <line x1="415" y1="379" x2="418" y2="380"/><line x1="445" y1="379" x2="442" y2="380"/>
+      <line x1="415" y1="391" x2="418" y2="390"/><line x1="445" y1="391" x2="442" y2="390"/>
+    </g>
+    <circle cx="430" cy="385" r="4" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Cannon bone -->
+    <rect x="422" y="399" width="16" height="82" rx="3" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="426" y1="410" x2="434" y2="410" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="426" y1="430" x2="434" y2="430" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="426" y1="450" x2="434" y2="450" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="426" y1="470" x2="434" y2="470" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Piston rod -->
+    <rect x="439" y="392" width="6" height="65" rx="1" fill="url(#h-piston)" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="437" y="415" width="10" height="14" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <rect x="437" y="440" width="10" height="14" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Fetlock -->
+    <circle cx="430" cy="483" r="9" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.2"/>
+    <circle cx="430" cy="483" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Hoof -->
+    <path d="M416,492 L444,492 L448,524 Q430,532 412,524 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="424" y1="496" x2="422" y2="522" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="430" y1="496" x2="430" y2="526" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="436" y1="496" x2="438" y2="522" stroke="#1b241c" stroke-width="0.6"/>
+    <path d="M417,522 Q430,528 443,522" fill="none" stroke="#3d6b78" stroke-width="2"/>
+  </g>
+
+  <!-- === BODY === -->
+  <!-- Main barrel torso -->
+  <path d="M150,210 Q140,220 140,250 L140,295 Q145,320 175,325 L445,305 Q475,298 475,270 L475,230 Q470,205 440,200 L180,208 Q150,210 150,210 Z" fill="url(#h-brass)" stroke="#1b241c" stroke-width="2"/>
+
+  <!-- Overlapping metal plates on body -->
+  <!-- Upper plates -->
+  <path d="M180,208 L250,205 L248,235 L178,238 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1" opacity="0.7"/>
+  <path d="M250,205 L320,203 L318,233 L248,235 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1" opacity="0.7"/>
+  <path d="M320,203 L390,201 L390,230 L318,233 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1" opacity="0.7"/>
+  <path d="M390,201 L440,200 L448,228 L390,230 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1" opacity="0.7"/>
+  <!-- Middle plates -->
+  <path d="M155,250 L240,248 L238,280 L152,282 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1" opacity="0.6"/>
+  <path d="M240,248 L330,245 L328,278 L238,280 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1" opacity="0.6"/>
+  <path d="M330,245 L420,242 L420,275 L328,278 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1" opacity="0.6"/>
+  <path d="M420,242 L465,240 L462,272 L420,275 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1" opacity="0.6"/>
+
+  <!-- Rivets along body -->
+  <g fill="#6b5a48" stroke="#1b241c" stroke-width="0.5">
+    <circle cx="195" cy="220" r="2.5"/><circle cx="265" cy="218" r="2.5"/>
+    <circle cx="335" cy="216" r="2.5"/><circle cx="410" cy="215" r="2.5"/>
+    <circle cx="170" cy="260" r="2"/><circle cx="250" cy="258" r="2"/>
+    <circle cx="340" cy="255" r="2"/><circle cx="430" cy="253" r="2"/>
+    <circle cx="165" cy="300" r="2"/><circle cx="260" cy="295" r="2"/>
+    <circle cx="355" cy="292" r="2"/><circle cx="445" cy="288" r="2"/>
+  </g>
+
+  <!-- === INTERNAL GEARS visible through plate gaps === -->
+  <g opacity="0.75">
+    <!-- Large gear mechanism -->
+    <circle cx="300" cy="260" r="25" fill="none" stroke="#3d6b78" stroke-width="1.5"/>
+    <circle cx="300" cy="260" r="20" fill="none" stroke="#3d6b78" stroke-width="0.8"/>
+    <circle cx="300" cy="260" r="5" fill="#3d6b78" stroke="#1b241c" stroke-width="1"/>
+    <!-- Gear teeth -->
+    <g stroke="#3d6b78" stroke-width="1" fill="none">
+      <line x1="300" y1="234" x2="300" y2="239"/><line x1="300" y1="281" x2="300" y2="286"/>
+      <line x1="274" y1="260" x2="279" y2="260"/><line x1="321" y1="260" x2="326" y2="260"/>
+      <line x1="282" y1="242" x2="285" y2="245"/><line x1="318" y1="242" x2="315" y2="245"/>
+      <line x1="282" y1="278" x2="285" y2="275"/><line x1="318" y1="278" x2="315" y2="275"/>
+      <line x1="276" y1="250" x2="280" y2="252"/><line x1="324" y1="250" x2="320" y2="252"/>
+      <line x1="276" y1="270" x2="280" y2="268"/><line x1="324" y1="270" x2="320" y2="268"/>
+      <line x1="290" y1="236" x2="292" y2="240"/><line x1="310" y1="236" x2="308" y2="240"/>
+      <line x1="290" y1="284" x2="292" y2="280"/><line x1="310" y1="284" x2="308" y2="280"/>
+    </g>
+    <!-- Connected cam -->
+    <ellipse cx="340" cy="272" rx="12" ry="8" fill="none" stroke="#1f3f48" stroke-width="1.2" transform="rotate(20,340,272)"/>
+    <circle cx="340" cy="272" r="3" fill="#1f3f48" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Drive shaft line -->
+    <line x1="325" y1="260" x2="340" y2="268" stroke="#3d6b78" stroke-width="1"/>
+    <!-- Secondary gear -->
+    <circle cx="255" cy="270" r="14" fill="none" stroke="#1f3f48" stroke-width="1.2"/>
+    <circle cx="255" cy="270" r="9" fill="none" stroke="#1f3f48" stroke-width="0.6"/>
+    <circle cx="255" cy="270" r="3" fill="#1f3f48" stroke="#1b241c" stroke-width="0.5"/>
+    <g stroke="#1f3f48" stroke-width="0.7" fill="none">
+      <line x1="255" y1="255" x2="255" y2="259"/><line x1="255" y1="281" x2="255" y2="285"/>
+      <line x1="240" y1="270" x2="244" y2="270"/><line x1="266" y1="270" x2="270" y2="270"/>
+      <line x1="245" y1="261" x2="247" y2="263"/><line x1="265" y1="261" x2="263" y2="263"/>
+      <line x1="245" y1="279" x2="247" y2="277"/><line x1="265" y1="279" x2="263" y2="277"/>
+    </g>
+    <!-- Spring coils -->
+    <path d="M370,250 Q375,245 380,250 Q385,255 390,250 Q395,245 400,250 Q405,255 410,250" fill="none" stroke="#3d6b78" stroke-width="1"/>
+    <path d="M190,255 Q195,250 200,255 Q205,260 210,255 Q215,250 220,255 Q225,260 230,255" fill="none" stroke="#3d6b78" stroke-width="1"/>
+  </g>
+
+  <!-- === WIND-UP KEY on flank (large, prominent) === -->
+  <g>
+    <!-- Key shaft -->
+    <rect x="356" y="190" width="10" height="18" rx="2" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Mounting plate -->
+    <ellipse cx="361" cy="208" rx="14" ry="7" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.2"/>
+    <ellipse cx="361" cy="208" rx="7" ry="3.5" fill="#5a6658" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Key bow (large, ornate) -->
+    <path d="M340,168 L340,150 Q340,132 355,132 L367,132 Q382,132 382,150 L382,168" fill="none" stroke="#8a6a48" stroke-width="5"/>
+    <path d="M340,168 L340,150 Q340,132 355,132 L367,132 Q382,132 382,150 L382,168" fill="none" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Key detail -->
+    <rect x="354" y="194" width="14" height="4" rx="1" fill="#6b5a48" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="348" y1="140" x2="374" y2="140" stroke="#1b241c" stroke-width="0.6"/>
+  </g>
+
+  <!-- === FRONT LEGS === -->
+  <!-- Front left leg (further) -->
+  <g>
+    <!-- Shoulder plate -->
+    <path d="M178,260 L195,255 L202,350 L182,355 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Elbow piston -->
+    <rect x="180" y="340" width="24" height="9" rx="2" fill="url(#h-piston)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Elbow gear -->
+    <circle cx="192" cy="358" r="13" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="192" cy="358" r="8" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.7" fill="none">
+      <line x1="192" y1="344" x2="192" y2="348"/><line x1="192" y1="368" x2="192" y2="372"/>
+      <line x1="178" y1="358" x2="182" y2="358"/><line x1="202" y1="358" x2="206" y2="358"/>
+      <line x1="183" y1="349" x2="185" y2="351"/><line x1="201" y1="349" x2="199" y2="351"/>
+      <line x1="183" y1="367" x2="185" y2="365"/><line x1="201" y1="367" x2="199" y2="365"/>
+    </g>
+    <circle cx="192" cy="358" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Lower leg -->
+    <rect x="185" y="370" width="14" height="82" rx="3" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Piston rod -->
+    <rect x="200" y="365" width="5" height="60" rx="1" fill="url(#h-piston)" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="199" y="390" width="7" height="12" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Fetlock -->
+    <circle cx="192" cy="454" r="8" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.2"/>
+    <circle cx="192" cy="454" r="3" fill="#3d6b78" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Hoof -->
+    <path d="M180,462 L204,462 L208,494 Q192,502 176,494 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="186" y1="466" x2="184" y2="492" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="192" y1="466" x2="192" y2="496" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="198" y1="466" x2="200" y2="492" stroke="#1b241c" stroke-width="0.6"/>
+    <path d="M181,492 Q192,498 203,492" fill="none" stroke="#3d6b78" stroke-width="2"/>
+  </g>
+
+  <!-- Front right leg -->
+  <g>
+    <!-- Shoulder plate -->
+    <path d="M155,268 L175,260 L182,352 L158,358 Z" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="160" y1="280" x2="174" y2="275" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="159" y1="300" x2="176" y2="296" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="158" y1="320" x2="178" y2="316" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="157" y1="340" x2="180" y2="336" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Elbow piston -->
+    <rect x="155" y="345" width="28" height="10" rx="2" fill="url(#h-piston)" stroke="#1b241c" stroke-width="1.2"/>
+    <rect x="160" y="347" width="18" height="6" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Elbow gear -->
+    <circle cx="170" cy="362" r="15" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="170" cy="362" r="10" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <g stroke="#1b241c" stroke-width="0.9" fill="none">
+      <line x1="170" y1="346" x2="170" y2="350"/><line x1="170" y1="374" x2="170" y2="378"/>
+      <line x1="154" y1="362" x2="158" y2="362"/><line x1="182" y1="362" x2="186" y2="362"/>
+      <line x1="159" y1="352" x2="162" y2="354"/><line x1="181" y1="352" x2="178" y2="354"/>
+      <line x1="159" y1="372" x2="162" y2="370"/><line x1="181" y1="372" x2="178" y2="370"/>
+      <line x1="156" y1="356" x2="159" y2="357"/><line x1="184" y1="356" x2="181" y2="357"/>
+      <line x1="156" y1="368" x2="159" y2="367"/><line x1="184" y1="368" x2="181" y2="367"/>
+    </g>
+    <circle cx="170" cy="362" r="4" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <!-- Lower leg -->
+    <rect x="162" y="376" width="16" height="80" rx="3" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="166" y1="390" x2="174" y2="390" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="166" y1="410" x2="174" y2="410" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="166" y1="430" x2="174" y2="430" stroke="#1b241c" stroke-width="0.5"/>
+    <line x1="166" y1="445" x2="174" y2="445" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Piston rod -->
+    <rect x="179" y="370" width="6" height="65" rx="1" fill="url(#h-piston)" stroke="#1b241c" stroke-width="0.8"/>
+    <rect x="177" y="395" width="10" height="14" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <rect x="177" y="420" width="10" height="14" rx="1" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Fetlock -->
+    <circle cx="170" cy="458" r="9" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1.2"/>
+    <circle cx="170" cy="458" r="3.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.7"/>
+    <!-- Hoof -->
+    <path d="M156,468 L184,468 L188,502 Q170,510 152,502 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <line x1="164" y1="472" x2="162" y2="500" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="170" y1="472" x2="170" y2="504" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="176" y1="472" x2="178" y2="500" stroke="#1b241c" stroke-width="0.6"/>
+    <path d="M157,500 Q170,506 183,500" fill="none" stroke="#3d6b78" stroke-width="2"/>
+  </g>
+
+  <!-- === CHEST === -->
+  <path d="M150,210 Q130,225 128,260 Q126,300 150,320 L175,325 L160,270 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1.5"/>
+  <line x1="135" y1="235" x2="160" y2="228" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="132" y1="260" x2="158" y2="255" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="134" y1="285" x2="162" y2="278" stroke="#1b241c" stroke-width="0.6"/>
+  <line x1="140" y1="308" x2="168" y2="302" stroke="#1b241c" stroke-width="0.6"/>
+
+  <!-- === NECK === -->
+  <path d="M128,210 L155,208 L145,145 Q142,130 130,128 L105,130 Q92,135 90,155 L100,210 Z" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+  <!-- Neck plates -->
+  <line x1="100" y1="190" x2="148" y2="188" stroke="#1b241c" stroke-width="0.8"/>
+  <line x1="98" y1="170" x2="146" y2="168" stroke="#1b241c" stroke-width="0.8"/>
+  <line x1="96" y1="150" x2="140" y2="148" stroke="#1b241c" stroke-width="0.8"/>
+  <!-- Neck rivets -->
+  <circle cx="115" cy="180" r="2" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="112" cy="160" r="2" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="108" cy="140" r="2" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="135" cy="178" r="2" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  <circle cx="133" cy="158" r="2" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+
+  <!-- === MANE - articulated metal strips === -->
+  <g>
+    <!-- Individual mane strips falling from poll to withers -->
+    <path d="M120,130 Q115,135 118,145 Q122,148 120,155" fill="none" stroke="#6b5a48" stroke-width="2.5"/>
+    <path d="M125,128 Q118,138 122,150 Q126,155 123,165" fill="none" stroke="#8a6a48" stroke-width="2"/>
+    <path d="M130,128 Q122,140 126,155 Q130,162 127,175" fill="none" stroke="#6b5a48" stroke-width="2.5"/>
+    <path d="M135,130 Q126,142 130,158 Q134,168 130,182" fill="none" stroke="#8a6a48" stroke-width="2"/>
+    <path d="M138,135 Q130,148 134,165 Q138,175 134,190" fill="none" stroke="#6b5a48" stroke-width="2.5"/>
+    <path d="M142,140 Q134,155 138,172 Q142,182 138,198" fill="none" stroke="#8a6a48" stroke-width="2"/>
+    <path d="M148,148 Q140,162 144,180 Q148,190 145,205" fill="none" stroke="#6b5a48" stroke-width="2"/>
+    <!-- Articulation joints on mane strips -->
+    <circle cx="119" cy="140" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="124" cy="148" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="128" cy="155" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="132" cy="162" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="136" cy="170" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="140" cy="178" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="145" cy="186" r="1.5" fill="#3d6b78" stroke="#1b241c" stroke-width="0.4"/>
+  </g>
+
+  <!-- === HEAD === -->
+  <g>
+    <!-- Skull -->
+    <path d="M70,105 L105,100 Q120,102 125,118 L130,130 L110,135 L70,130 Q55,128 52,118 Q50,108 70,105 Z" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Face/muzzle -->
+    <path d="M52,115 L35,118 Q18,122 15,135 L18,148 L35,152 L55,150 L70,130 Q55,128 52,118 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1.5"/>
+    <!-- Face plate lines -->
+    <line x1="45" y1="120" x2="42" y2="145" stroke="#1b241c" stroke-width="0.6"/>
+    <line x1="60" y1="118" x2="62" y2="138" stroke="#1b241c" stroke-width="0.6"/>
+    <!-- Nostril -->
+    <ellipse cx="25" cy="140" rx="5" ry="4" fill="#1b241c" stroke="#1b241c" stroke-width="1"/>
+    <ellipse cx="23" cy="138" rx="2" ry="1.5" fill="#3d6b78" opacity="0.4"/>
+    <!-- Jaw -->
+    <path d="M35,152 L55,150 L60,158 L38,160 Z" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1"/>
+    <!-- Jaw hinge -->
+    <circle cx="57" cy="148" r="4" fill="url(#h-steel)" stroke="#1b241c" stroke-width="1"/>
+    <circle cx="57" cy="148" r="1.5" fill="#3d6b78"/>
+
+    <!-- Eye -->
+    <circle cx="75" cy="115" r="10" fill="#1f3f48" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="75" cy="115" r="7" fill="#3d6b78" stroke="#1b241c" stroke-width="0.8"/>
+    <circle cx="75" cy="115" r="3.5" fill="#1b241c"/>
+    <circle cx="73" cy="112" r="1.5" fill="#efe6d4" opacity="0.5"/>
+    <circle cx="75" cy="115" r="9" fill="none" stroke="#8a6a48" stroke-width="0.5"/>
+
+    <!-- Ear -->
+    <path d="M100,100 L105,75 Q107,65 100,63 L92,65 Q88,68 90,78 L94,98" fill="url(#h-brass)" stroke="#1b241c" stroke-width="1.5"/>
+    <circle cx="97" cy="97" r="3" fill="url(#h-steel)" stroke="#1b241c" stroke-width="0.8"/>
+    <circle cx="97" cy="97" r="1.2" fill="#3d6b78"/>
+    <!-- Inner ear -->
+    <path d="M96,90 L99,76 Q100,71 96,70 L93,72 Q91,74 92,80 L94,90" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="0.5"/>
+    <!-- Second ear (behind) -->
+    <path d="M112,102 L118,78 Q119,68 113,66 L108,68 Q105,71 107,80 L110,100" fill="url(#h-dark-brass)" stroke="#1b241c" stroke-width="1.2"/>
+
+    <!-- Head rivets -->
+    <circle cx="90" cy="108" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="110" cy="108" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="65" cy="128" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+    <circle cx="40" cy="132" r="1.5" fill="#6b5a48" stroke="#1b241c" stroke-width="0.4"/>
+  </g>
+
+  <!-- === RUMP === -->
+  <path d="M440,200 Q475,205 475,230 L475,270 Q470,295 445,305 L430,308 L448,265 L450,220 Z" fill="url(#h-copper)" stroke="#1b241c" stroke-width="1"/>
+  <line x1="448" y1="220" x2="465" y2="218" stroke="#1b241c" stroke-width="0.5"/>
+  <line x1="450" y1="245" x2="470" y2="242" stroke="#1b241c" stroke-width="0.5"/>
+  <line x1="448" y1="270" x2="468" y2="265" stroke="#1b241c" stroke-width="0.5"/>
+  <line x1="442" y1="290" x2="460" y2="285" stroke="#1b241c" stroke-width="0.5"/>
+
+  <!-- === BELLY underline visible mechanics === -->
+  <g opacity="0.5">
+    <path d="M190,320 Q200,328 210,320 Q220,328 230,320 Q240,328 250,320 Q260,328 270,320 Q280,328 290,320 Q300,328 310,320 Q320,328 330,320 Q340,328 350,320 Q360,328 370,320 Q380,328 390,320 Q400,328 410,320" fill="none" stroke="#3d6b78" stroke-width="1"/>
+  </g>
+</svg>

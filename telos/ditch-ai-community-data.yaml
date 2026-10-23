@@ -1,0 +1,18 @@
+id: ditch-ai-community-data
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+flow: data-governance
+telos: >
+  Community-generated data stays governed by the community that generated
+  it -- collected by community authorization, accessed through a measured
+  gate, held in civic custody.
+anti_telos: >
+  The social contract broken. Sovereignty traded for a discount on hardware.
+  A city council signs a contract nobody read and a company in another state
+  now has your town's movement data forever.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

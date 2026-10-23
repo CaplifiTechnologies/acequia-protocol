@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Distribution
+*.tar.gz
+*.zip
+
+# Claude Code config
+.claude/
+
+# Internal working directories (not part of the public package)
+gathered-*/
+frontier-headgate-profiles/
+research/
+reviews/
+qa/
+papers/
+launch/
+public/
+primitives/
+explorer.html
+specs/migration-inputs/
+
+# Internal specs (house migration / counsel / planning docs)
+specs/SLOPSTREAM*.md
+specs/LEDGER-CHOKE-POINTS.md
+specs/PRIMITIVES-PACKAGING*.md
+specs/MAYORDOMO-TOOL-SPEC.md
+specs/MYCO-COUNSEL*.md
+specs/ENTITY-STRUCTURE-COUNSEL*.md
+
+# Internal docs
+docs/CAMPAIGN-SENTINEL.md
+
+# Fenced code (held IP / origami dependency)
+app/mayordomo.py
+app/tuner.py
+app/chat.html
+app/server.py
+app/acequiaprotocol/
+app/protocol/
+tests/test_mayordomo.py
+
+# House deploy scripts
+deploy-*.sh
+
+# Internal planning docs
+ROADMAP.md
+DITCH-WALK-REPORT.md
+ACEQUIA-PROTOCOL-PRODUCT-THESIS.md

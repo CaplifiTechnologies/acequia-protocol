@@ -1,0 +1,18 @@
+[project]
+name = "ditchai"
+version = "0.2.0"
+description = "Acequia Protocol — telos-bound inference primitives and composable governance gates"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+[project.scripts]
+acequia-demo = "app.acequia:demo"
+headgate-demo = "app.headgate:demo"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]

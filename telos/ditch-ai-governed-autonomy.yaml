@@ -1,0 +1,19 @@
+id: ditch-ai-governed-autonomy
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+flow: ai-governance
+telos: >
+  The balance between human and machine control is intentional and
+  measurable. A system where AI is in control because someone chose that
+  is governed. The score does not judge the balance -- it measures whether
+  the balance is intentional.
+anti_telos: >
+  A system where AI is in control because nobody noticed. Documentation
+  says human-operated. The score says rogue. Nobody measured and nobody
+  chose.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []

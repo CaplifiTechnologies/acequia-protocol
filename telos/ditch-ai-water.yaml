@@ -1,0 +1,19 @@
+id: ditch-ai-water
+proposed_by: claude-code
+proposed_at: '2026-09-10'
+status: proposed
+flow: water
+telos: >
+  The digital protocol is faithful to the governance water districts already
+  practice -- the acequia translated, not rebranded. The people who have
+  maintained shared water for four hundred years are the credibility anchor,
+  not the metaphor.
+anti_telos: >
+  The tech world takes the name and loses the practice. "Acequia" becomes
+  a brand word for a system the actual ditch riders do not recognize. The
+  metaphor drifts from the ditch it was named for.
+bindings:
+  agents: []
+  projects:
+    - ditch-ai-commons
+  products: []
