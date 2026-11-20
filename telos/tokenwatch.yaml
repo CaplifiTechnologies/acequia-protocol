@@ -1,0 +1,24 @@
+id: tokenwatch
+proposed_by: claude-code
+proposed_at: '2026-11-20'
+status: proposed
+flow: measurement
+
+telos: >
+  Frontier inference pricing is published, archived, and auditable —
+  every provider's prices sit in a hash-chained ledger any parciante
+  can verify, so routing decisions (Sir Ornith) and governance gates
+  (Headgate 12) rest on measurement, not marketing.
+
+anti_telos: >
+  Pricing is opaque. Providers change rates without notice, bury tiers
+  in fine print, or hide per-token costs behind subscription bundles.
+  No shared record exists, so routing is blind and the gate has
+  nothing to measure.
+
+bindings:
+  agents:
+    - sir-ornith        # consumes routing advisories
+  projects:
+    - ditch-ai-commons  # headgate chain conformance
+  products: []
