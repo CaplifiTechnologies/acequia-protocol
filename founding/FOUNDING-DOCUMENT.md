@@ -122,6 +122,8 @@ The Acequia Protocol exists because your town deserves the same governance over 
 
 The governance pattern already exists. It's been tested for centuries. It was designed by farmers, not theorists. The only thing missing is the specification that translates it from water to data — from an irrigation ditch in the San Luis Valley to a library server room in any American town.
 
+The deeper principle is this: if the resource is the same resource flowing through different forms, the governance should flow with it. Water becomes ultrapure water becomes clean silicon becomes a chip becomes compute becomes a model becomes a prediction. At every transition, someone decides who gets how much. That someone should be accountable to the community that depends on the resource — from snowflake to inference. The chain is not a metaphor. It is plumbing.
+
 ---
 
 *Ditch AI is an independent open standards body. The Acequia Protocol is an open specification. Infrastructure built for stewardship.*

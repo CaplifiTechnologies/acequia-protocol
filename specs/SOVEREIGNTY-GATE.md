@@ -17,7 +17,10 @@ means fuel flows. Override is always available. If a licensee extends it
 to gate fuel access on non-chemistry criteria, the license terminates.
 
 The same primitive governs every gate in the Acequia Protocol. The
-mayordomo measures the water, not the farmer.
+mayordomo measures the water, not the farmer. And the governance
+follows the resource through every form it takes — water to silicon to
+compute to inference. If the resource is the same resource flowing
+through different forms, the governance should flow with it.
 
 ---
 

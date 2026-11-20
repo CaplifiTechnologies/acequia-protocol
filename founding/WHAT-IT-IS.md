@@ -100,7 +100,7 @@ Your local government's job is to protect you, not to package you.
 
 The Acequia Protocol exists because your town deserves the same governance over its data that acequia communities have maintained over their water for four hundred years. The governance pattern already exists. It's been tested for centuries. It was designed by farmers, not theorists.
 
-The only thing missing is the specification that translates it from water to data — from an irrigation ditch in the San Luis Valley to a library server room in any American town.
+The principle underneath is simple: if the resource is the same resource flowing through different forms, the governance should flow with it. Water becomes data becomes silicon becomes compute becomes inference. The chain is physical, not metaphorical — the water that washes a semiconductor wafer fell as snow in Colorado, and the governance that protects the snowmelt should follow the resource all the way to the prediction it enables.
 
 ---
 

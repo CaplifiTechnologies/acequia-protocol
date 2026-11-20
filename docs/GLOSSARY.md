@@ -33,6 +33,7 @@ HANDLE = audience-facing language; LABEL = universal one-liner language.
 | **Aforo** | Water measurement at the headgate. The act of measuring flow. | FULL | BRAND |
 | **Appurtenance** | A right attached to the land, not the person. Water cannot be severed from the community that depends on it. | FULL | WHAT-IT-IS |
 | **Beneficial use** | Water must be put to productive use or the right lapses. Use it or lose it. | FULL | FOUNDING-DOCUMENT |
+| **Governance flows with the resource** | If the resource is the same resource flowing through different forms, the governance should flow with it. Water becomes ultrapure water becomes clean silicon becomes a chip becomes compute becomes a model becomes a prediction. The chain is not a metaphor — it is plumbing. | HANDLE | HEADGATE-CHAIN |
 | **Headgate** | Physical or logical structure where allocation happens. The point where a governed decision controls how much resource flows to whom. Every transition in the supply chain is a potential headgate. | HANDLE | HEADGATE-CHAIN, FOUNDING-DOCUMENT |
 | **La Limpia** | Annual ditch cleaning and inspection walk. The review phase of the operator cycle. In the chain: cross-link La Limpia walks all 12 links together, making every observer non-local at 11 of 12 links. | FULL | HANDBOOK-SPEC |
 | **Lateral** | Branch ditch off the acequia madre. Serves a subset of parcels. | FULL | MAYORDOMO-TOOL-SPEC |
